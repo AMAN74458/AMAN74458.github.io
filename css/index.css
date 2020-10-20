@@ -1,0 +1,689 @@
+/* copyrights BTC all rights reserved */
+/* developer AMAN KUMAR v-0.1 */
+
+
+html, body {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    background-color: #333646;
+}
+
+
+/*==================================================== Dark Mode ================================================*/
+/*==================================================== Dark Mode ================================================*/
+/*==================================================== Dark Mode ================================================*/
+/*==================================================== Dark Mode ================================================*/
+
+.navbar-custom {
+    border-top: 5px solid #1FCC8E;
+    padding: 40px 10%;
+}
+
+.brand-logo {
+    width: 120px;
+}
+
+.brand-logo svg {
+    width: 100px;
+}
+
+.nav li {
+    margin: 5px;
+}
+
+.top-links {
+    font-size: 1.2em;
+    color: #c4c4c4;
+    font-weight: 600;
+}
+
+.top-links:hover, .top-links:active {
+    color: #1FCC8E;
+    transition: color 0.25s ease-in;
+}
+
+#active-link-icon {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    width: 4px;
+    height: 4px;
+    border-radius: 50px;
+    background-color: #1FCC8E;
+}
+  
+.active-link {
+    color: #1FCC8E !important;
+}
+
+.toggle-switch {
+    position: relative;
+    top: 11px;
+    left: 15px;
+}
+
+.custom-switch label {
+    color: #c4c4c4;
+}
+
+input:checked~.custom-control-label::before {
+    border-color: #1FCC8E!important;
+    background-color: #1FCC8E!important;
+    box-shadow: none!important;
+}
+
+.custom-control-label::before {
+    box-shadow: none!important;
+}
+
+.custom-switch label:hover, .custom-switch label:active {
+    color: #1FCC8E;
+}
+
+/*===============================================================================================================*/
+/*===============================================================================================================*/
+/*===============================================================================================================*/
+/*===============================================================================================================*/
+
+.navbar.scrolled {
+    border-top: 2px solid #1FCC8E;
+    background-color: #333646 !important;
+    /*background-color: #E1E1E1;*/
+    padding: 18px 8% 15px 8% !important;
+    box-shadow: -2px 2px 8px -5px #141313;
+    transition: all 400ms linear;
+}
+  
+.navbar.scrolled .top-links {
+    color: #c4c4c4;
+    font-size: 1em;
+}
+  
+.navbar.scrolled .brand-logo svg {
+    width: 60%;
+    padding-top: 5px;
+    transition: all 400ms linear;
+}
+  
+.navbar.scrolled a.top-links:hover {
+    color: #1FCC8E;
+    transition: 0.5s ease;
+}
+  
+.navbar.scrolled a.top-links-btn {
+    color: #141313;
+    border: 2px solid #141313;
+}
+  
+.navbar.scrolled a.top-links-btn:hover {
+    color: #1FCC8E;
+    border: 2px solid #1FCC8E;
+}
+  
+.navbar.scrolled #active-link-icon {
+    top: 50%;
+}
+
+/*------------------------------Toggler icon-----------------------------------*/
+/*-----------------------------Triggered when---------------------------------*/
+/*---------------------------screen size reduced-------------------------------*/
+
+.navbar-toggler {
+    outline: none !important;
+}
+
+.button-inner-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Menu toggle button */
+
+.icon {
+      line-height: 0;
+}
+  
+.menu-icon {
+    text-align: right;
+    width: 27px;
+}
+  
+.menu-icon::after, .menu-icon::before {
+    background-color: #1FCC8E;
+    content: "";
+    display: inline-block;
+    height: 3px;
+    width: 27px;
+    margin: 3px 0;
+    transition-duration: 0.4s;
+}
+  
+.menu-icon::before {
+    width: 27px;
+  }
+  
+.menu-icon::after {
+    width: 18px;
+}
+  
+#menu-button:hover .menu-icon::before {
+    width: 18px;
+    transition-duration: 0.2s ease;
+}
+  
+#menu-button:hover .menu-icon::after{
+    width: 27px;
+    transition-duration: 0.2s ease;
+}
+  
+#menu-button[aria-expanded="true"] {
+    background-color: #333646;
+}
+  
+#menu-button[aria-expanded="true"] .menu-icon::before {
+    transform: rotateZ(135deg) translate(3px, -3px);
+    width: 27px;
+}
+  
+#menu-button[aria-expanded="true"] .menu-icon::after {
+    transform: rotateZ(-135deg) translate(3px, 3px);
+    width: 27px;
+}
+
+.toggler-btn {
+    z-index: 1;
+}
+  
+/*------------------------------Toggler icon-----------------------------------*/
+/*---------------------------------Styling-------------------------------------*/
+/*-----------------------------------end---------------------------------------*/
+  
+.collapsing {
+    -webkit-transition: none;
+    transition: none;
+    display: none;
+}
+  
+.navbar-collapse.collapse.show {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #252734fd;
+    /*background-color: rgba(31, 204, 141, 0.699);*/
+}
+
+.navbar-collapse.collapse.show #active-link-icon {
+    display: none;
+}
+
+.navbar-collapse.collapse.show #top-toggle-label::before {
+    position: relative;
+    top: 27px;
+}
+
+.navbar-collapse.collapse.show #top-toggle-label::after {
+    position: relative;
+    top: -23px;
+}
+  
+.navbar-collapse.collapse.show .top-main-links {
+    position: fixed;
+    height: 50vh;
+    width: 50vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+  
+.navbar-collapse.collapse.show .top-main-links li {
+    margin: 20px;
+}
+
+
+.navbar-collapse.collapse.show .custom-control {
+    padding-left: 0;
+}
+  
+/*===============================================================================================================*/
+/*===============================================================================================================*/
+/*===============================================================================================================*/
+/*===============================================================================================================*/
+
+.section-1 {
+    min-height: 60vh;
+    margin-top: 140px;
+    padding: 80px 5%;
+}
+
+.sect-1-sub-left-content h1 {
+    color: #e7e7e7;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 7em;
+    letter-spacing: 1px;
+}
+
+#sect-1-canvas {
+    width: 120px;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.banner-sub-stm {
+    margin-top: 30px;
+    color: #e7e7e7;
+}
+
+.banner-sub-stm span {
+    position: absolute;
+    top: 86.5%;
+    margin-left: 20px;
+    color: #1FCC8E;
+    font-size: 2em;
+}
+
+.sect-1-sub-right-content {
+    padding: 20px 0 0 8%;
+}
+
+.sect-1-sub-right-content span {
+    color: #A8A7A7;
+    font-weight: 300;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+
+.sect-1-sub-right-content h5 {
+    color: #dadada;
+    font-weight: 600;
+    font-size: 1.9em;
+    margin: 35px 0;
+    letter-spacing: 1px;
+}
+
+.sect-1-sub-right-content p {
+    color: #e2e2e2;
+    font-weight: 300;
+}
+
+.login-join-btn button {
+    margin-top: 36px;
+    border: 2px solid #1FCC8E;
+    font-weight: 600;
+    color: #e7e7e7;
+    letter-spacing: 1px;
+    box-shadow: none!important;
+}
+
+.login-btn {
+    width: 97.88px;
+    background-color: #1FCC8E;
+}
+
+.join-now-btn:hover {
+    background-color: #e7e7e7;
+    color: #000000;
+    border: 2px solid #e7e7e7;
+    transition: all 0.3s ease-in;
+}
+
+.login-btn:hover {
+    background-color: #333646;
+    color: #e7e7e7;
+    border: 2px solid #e7e7e7;
+    transition: all 0.3s ease-in;
+}
+
+.join-now-btn:active, .login-btn:active {
+    transform: scale(0.9);
+    transition: transform 0.5s ease-out;
+}
+
+/*===============================================================================================================*/
+/*===============================================================================================================*/
+/*===============================================================================================================*/
+/*===============================================================================================================*/
+
+footer {
+    min-height: 34vh;
+    margin-top: 20px;
+    padding: 110px 10% 0 10%;
+    background-color: #252734;
+}
+
+footer ul {
+    display: inline;
+}
+
+.footer-container {
+    padding: 5% 0 0 0!important;
+}
+  
+.footer-flex {
+    width: 100%;
+    margin-left: 0!important;
+    margin-right: 0!important;
+}
+
+.copyright-sect {
+    color: #f4f4f4;
+}
+
+footer ul li {
+    display: inline-block;
+}
+  
+footer a {
+    color: #c4c4c4;
+    font-weight: 300;
+}
+  
+footer a:hover {
+    text-decoration: none;
+    color: #1FCC8E;
+    transition: color 0.4s ease;
+}
+
+.footer-copyright span {
+    font-weight: 300;
+}
+
+.made-in-india {
+    padding-top: 35px;
+    padding-bottom: 20px;
+    color: #c9c7c7;
+}
+
+
+/*================================================ Experimental =================================================*/
+/*================================================= Light Mode ==================================================*/
+/*================================================= Light Mode ==================================================*/
+/*================================================= Light Mode ==================================================*/
+
+
+.lightbg-mode {
+    background-color: #f1f1f1;
+}
+
+.top-links.light-top-link-mode {
+    font-size: 1.2em;
+    color: #252734;
+    font-weight: 600;
+}
+
+label.light-label-mode {
+    color: #252734;
+}
+
+.navbar.scrolled.light-navbar-scrolled-mode {
+    background-color: #f1f1f1!important;
+    padding: 18px 8% 15px 8% !important;
+    box-shadow: -2px 2px 8px -5px #141313;
+    transition: all 400ms linear;
+}
+
+.navbar.scrolled .top-links.light-top-scrolled-link-mode {
+    color: #252734;
+}
+
+.navbar.light-navbar-mode {
+    background-color: #f1f1f1;
+}
+
+.navbar-collapse.collapse.show.light-collapsed-bg {
+    background-color: #f4f4f4fb;
+}
+
+.navbar.scrolled .show .top-links.light-top-show-scrolled-link-mode {
+    color: #252734;
+}
+
+.section-1.light-section-1-mode {
+    background-color: #f1f1f1;
+}
+
+.sect-1-sub-left-content h1.light-h1-mode {
+    color: #000000;
+}
+
+.banner-sub-stm.light-p-mode {
+    color: #313131;
+}
+
+.sect-1-sub-right-content span.light-span-mode {
+    color: #757575;;
+}
+
+.sect-1-sub-right-content h5.light-h5-mode {
+    color: #686868;
+}
+
+.sect-1-sub-right-content p.light-p-subrt-mode {
+    color: #8d8d8d;
+}
+
+.login-join-btn button.light-join-btn-mode {
+    color: #1FCC8E;
+}
+
+.login-join-btn button.light-join-btn-mode:hover {
+    color: #000000;
+}
+
+footer.light-footer-mode {
+    background-color: #dadada;
+}
+
+.copyright-sect.light-copyright-mode {
+    color: #000000;
+}
+
+footer a.light-footer-link-mode {
+    color: #000000;
+}
+
+footer a:hover.light-footer-link-mode {
+    color: #1FCC8E;
+}
+
+.light-made-in-india-mode {
+    color: #000000;
+    font-size: 1.2em;
+}
+
+/*================================================= popup-signup =================================================*/
+/*================================================= popup-signup =================================================*/
+/*================================================= popup-signup =================================================*/
+/*================================================= popup-signup =================================================*/
+
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #EDF0F1;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    z-index: 2000;
+    display: none;
+}
+
+.close-icon {
+    position: relative;
+    top: 15px;
+    left: 95%;
+    font-size: 2em;
+    color: rgb(160, 30, 30);
+    text-decoration: none!important;
+}
+
+.popup-body {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 2%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: auto;
+    box-shadow: 0 0 15px 8px #e7e6e6;
+}
+
+.popup-buttons-signup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.popup-buttons-signup svg {
+    width: 5%;
+}
+
+.popup-btns {
+    width: 400px;
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: none!important;
+}
+
+.popup-btns:hover {
+    color: #ffffff;
+}
+
+.popup-btns:active {
+    transform: scale(0.9);
+    transition: transform 0.5s ease;
+}
+
+.github-icon-btn {
+    position: relative;
+    top: 32px;
+    left: -160px;
+    fill: #ffffff;
+}
+
+.google-icon-btn {
+    position: relative;
+    top: 32px;
+    left: -160px;
+    fill: #ffffff;
+}
+
+/*svg#github-icon path {
+    fill: #ffffff;
+}*/
+
+.github-btn {
+    background-color: #333646;
+}
+
+
+.google-btn {
+    background-color: rgb(219, 31, 31);
+}
+
+.email-btn {
+    background-color: #1FCC8E;
+}
+
+.p1 {
+    font-weight: 300;
+    margin-bottom: 0%;
+}
+
+/*================================================= Media Query =================================================*/
+/*================================================= Media Query =================================================*/
+/*================================================= Media Query =================================================*/
+/*================================================= Media Query =================================================*/
+
+@media only screen and (max-width: 1080px) {
+
+    .sect-1-sub-left-content h1 {
+        font-size: 6em;
+    }
+
+    .sect-1-sub-left-content span {
+        display: none!important;
+    }
+}
+
+@media only screen and (max-width: 766px) {
+    .sect-1-sub-right-content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    footer {
+        min-height: 40vh!important;
+    }
+
+    .footer-copyright {
+        text-align: center;
+    }
+
+    .bottom-link {
+        padding-top: 6%;
+        text-align: center!important;
+    }
+
+    .popup-buttons-signup svg {
+        width: 15px;
+    }
+    
+    .popup-btns {
+        width: 280px!important;
+        color: #ffffff;
+        font-weight: 600;
+        box-shadow: none!important;
+    }
+
+    .github-icon-btn {
+        position: relative;
+        top: 27px;
+        left: -115px;
+        fill: #ffffff;
+    }
+    
+    .google-icon-btn {
+        position: relative;
+        top: 27px;
+        left: -115px;
+        fill: #ffffff;
+    }
+
+    .close-icon {
+        position: relative;
+        top: 15px;
+        left: 91%;
+        font-size: 2em;
+        color: rgb(160, 30, 30);
+        text-decoration: none!important;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .join-now-btn {
+        margin-right: 24px;
+    }
+}
+
+
+
+
+
+
+

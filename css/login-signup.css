@@ -1,0 +1,469 @@
+/* copyrights BTC all rights reserved */
+/* developer AMAN KUMAR v-0.2 */
+
+html, body {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    background-image: linear-gradient(to top left, #26AC9C, #1FCC8E);
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.section-1 {
+    min-height: 92vh;
+}
+
+.form-container {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #141313;
+    width: 350px;
+    height: 550px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 8px rgba(0, 0, 0, 0.205);
+}
+
+.form-header h1 {
+    color: #1fcc8e;
+    font-weight: 600;
+    margin-top: 40px;
+}
+
+.form-header hr {
+    background-color: #1fcc8e!important;
+    width: 20%;
+}
+
+.form-container p {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.form-header p a {
+    color: #1FCC8E;
+    text-decoration: none;
+}
+
+.form-container p a:hover, .form-header p a:active {
+    color: #26AC9C;
+    transition: color 0.3s ease;
+}
+
+.grp-1-signup, .grp-2-signup, .grp-3-signup {
+    margin-bottom: 5px!important;
+}
+
+.text-field, .email-field, .pass-field {
+    width: 68%;
+    margin: auto;
+    border-radius: 50px;
+    border: 2px solid #ffffff;
+    background-color: #141313!important;
+    color: #ffffff!important;
+    font-weight: 500;
+    padding-left: 40px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    box-shadow: 0 0 0 30px #141313 inset !important;
+    -webkit-box-shadow: 0 0 0 30px #141313 inset !important;
+    -webkit-text-fill-color: #ffffff !important;
+    animation: none!important;
+    transition: none!important;
+}
+
+.text-field::placeholder, .email-field::placeholder, .pass-field::placeholder {
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 0.9em;
+    padding-left: 4px;
+}
+  
+.text-field:-ms-input-placeholder, .email-field:-ms-input-placeholder, .pass-field:-ms-input-placeholder {
+    color: red;
+  }
+  
+  .text-field::-ms-input-placeholder, .email-field::-ms-input-placeholder, .pass-field::-ms-input-placeholder {
+    color: red;
+  }
+
+.text-field:focus, .email-field:focus, .pass-field:focus {
+    background-color: #141313;
+    border: 2px solid #adb1af;
+    box-shadow: none;
+}
+
+.email-icon, .user-icon, .lock-icon {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: -32px;
+    left: 74px;
+}
+
+svg.email-icon path, svg.user-icon path, svg.lock-icon path {
+    fill: #ffffff;
+}
+
+.email-field:focus + svg.email-icon path, .text-field:focus + svg.user-icon path, .email-field:focus + svg.user-icon path, .pass-field:focus + svg.lock-icon path {
+    fill: #adb1af;
+}
+
+.checkbox-circle {
+    position: relative;
+    top: -15px;
+    left: 60px;
+}
+
+.label-remember {
+    position: relative;
+    top: -4.5px;
+    padding-left: 10px;
+    color: #ffffff;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.checkbox-circle {
+    position: relative;
+}
+  
+.checkbox-circle label.custom-label {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+}
+  
+.checkbox-circle label.custom-label:after {
+    border: 2px solid #fff;
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 4px;
+    width: 8px;
+    opacity: 0;
+    position: absolute;
+    top: 4px;
+    left: 3px;
+    transform: rotate(-45deg);
+}
+  
+.checkbox-circle input[type="checkbox"] {
+    visibility: hidden;
+}
+  
+.checkbox-circle input[type="checkbox"]:checked + label.custom-label {
+    background-color: #1FCC8E;
+    border-color: #1FCC8E;
+}
+  
+.checkbox-circle input[type="checkbox"]:checked + label.custom-label:after {
+    opacity: 1;
+}
+
+.signup-btn, .login-btn {
+    color: #e9e6e6;
+    font-weight: 600;
+    width: 30%;
+    border-radius: 50px;
+    background-color: #1FCC8E;
+    box-shadow: none!important;
+}
+
+.signup-btn:hover, .login-btn:hover {
+    background-color: #141313;
+    color: #e7e7e7;
+    border: 1px solid #1FCC8E;
+}
+
+.signup-btn:active, .login-btn:active {
+    transform: scale(0.9);
+    transition: all 0.5s ease;
+}
+
+.p-bot {
+    font-weight: 300!important;
+    font-size: 0.8em;
+    padding: 10% 15% 0 15%;
+}
+
+.p-bot a {
+    color: #1FCC8E;
+}
+
+.error {
+    position: absolute;
+    padding-top: 3px;
+    left: 80px;
+    color: rgb(238, 148, 148);
+    font-size: 0.6em;
+}
+
+#textSpan {
+    top: 195px;
+}
+
+#passSpan {
+    top: 274px;
+}
+
+footer {
+    width: 100%;
+    margin-top: 2px;
+    padding: 110px 10% 0 10%;
+    background-color: #252734;
+}
+  
+.footer-flex {
+    width: 100%;
+    margin-left: 0!important;
+    margin-right: 0!important;
+}
+
+.copyright-sect {
+    color: #f4f4f4;
+}
+
+footer ul li {
+    display: inline-block;
+}
+  
+footer a {
+    color: #c4c4c4;
+    font-weight: 300;
+}
+  
+footer a:hover {
+    text-decoration: none;
+    color: #1FCC8E;
+    transition: color 0.4s ease;
+}
+
+.footer-copyright span {
+    font-weight: 300;
+}
+
+/*================================================= Media Query =================================================*/
+/*================================================= Media Query =================================================*/
+/*================================================= Media Query =================================================*/
+/*================================================= Media Query =================================================*/
+
+@media only screen and (max-width: 766px) {
+
+    .form-container {
+        width: 320px;
+        height: 520px;
+    }
+
+    form { 
+        transform: scale(0.9);
+    }
+    
+    .form-header h1 {
+        color: #1fcc8e;
+        font-weight: 600;
+        margin-top: 20px;
+    }
+
+    .signup-btn-sect {
+        margin-top: 20px;
+    }
+
+    #textSpan {
+        top: 156px;
+    }
+    
+    #passSpan {
+        top: 234px;
+    }
+
+    footer {
+        padding-top: 0!important;
+        padding-bottom: 0!important;
+    }
+
+    .footer-container {
+        padding-top: 15px;
+    }
+
+    footer a, footer span {
+        font-size: 0.8em;
+    }
+
+    .footer-copyright {
+        text-align: center;
+    }
+
+    .bottom-link {
+        text-align: center!important;
+        padding-top: 5px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+
+    .grp-1 {
+        margin-top: 48px;
+    }
+
+    #textSpan {
+        top: 156px;
+    }
+    
+    #passSpan {
+        top: 234px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .form-container {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: #141313;
+        width: 250px;
+        height: 370px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px 8px rgba(0, 0, 0, 0.205);
+    }
+
+    .main-form {
+        position: relative;
+        top: -42px;
+        width: 250px;
+        height: 370px;
+    }
+    
+    .form-header h1 {
+        font-size: 1.5em;
+        margin-top: 45px;
+    }
+    
+    .form-header hr {
+        width: 12%;
+    }
+    
+    .form-container p {
+        font-size: 0.7em;
+    }
+    
+    .text-field, .email-field, .pass-field {
+        width: 68%;
+        height: 30px;
+        font-weight: 500;
+        padding-left: 35px;
+        font-size: 0.7em;
+    }
+
+    .grp-1 {
+        margin-top: 30px;
+        margin-bottom: 0!important;
+    }
+    
+    .text-field::placeholder, .email-field::placeholder, .pass-field::placeholder {
+        color: #ffffff;
+        font-weight: 300;
+    }
+    
+    .text-field:focus, .email-field:focus, .pass-field:focus {
+        background-color: #141313;
+        border: 2px solid #1FCC8E;
+        box-shadow: none;
+    }
+    
+    .email-icon, .user-icon, .lock-icon {
+        width: 10px;
+        height: 10px;
+        position: relative;
+        top: -29px;
+        left: 58px;
+    }
+    
+    .checkbox-circle {
+        position: relative;
+        top: -15px;
+        left: 42px;
+    }
+    
+    .label-remember {
+        position: relative;
+        top: -8.5px;
+        padding-left: 2px;
+        color: #ffffff;
+        font-weight: 400;
+        font-size: 0.7em;
+        cursor: pointer;
+    }
+    
+    .checkbox-circle {
+        position: relative;
+    }
+      
+    .checkbox-circle label.custom-label {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        cursor: pointer;
+        height: 10px;
+        width: 10px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+      
+    .checkbox-circle label.custom-label:after {
+        border: 2px solid #fff;
+        border-top: none;
+        border-right: none;
+        content: "";
+        height: 3px;
+        width: 6px;
+        opacity: 0;
+        position: absolute;
+        top: 2.2px;
+        left: 1px;
+        transform: rotate(-45deg);
+    }
+
+    .signup-btn-sect {
+        margin-top: 0;
+    }
+
+    .signup-btn-sect, .login-btn-sect {
+        position: relative;
+        top: -8px;
+    }
+    
+    .signup-btn, .login-btn {
+        width: 35%;
+        transform: scale(0.7);
+    }
+    
+    .p-bot {
+        position: relative;
+        top: -19px;
+    }
+    
+    #textSpan {
+        left: 62px;
+        top: 102px;
+    }
+    
+    #passSpan {
+        left: 62px;
+        top: 156px;
+    }
+}
