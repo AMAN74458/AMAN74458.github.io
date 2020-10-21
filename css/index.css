@@ -606,6 +606,11 @@ footer a:hover.light-footer-link-mode {
 .p1 {
     font-weight: 300;
     margin-bottom: 0%;
+    color: #e2e2e2;
+}
+
+.p1 a {
+    color: #1FCC8E;
 }
 
 /*================================================= Media Query =================================================*/
