@@ -532,7 +532,8 @@ footer a:hover.light-footer-link-mode {
 }
 
 .popup-body {
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
+    background-color: #252734f6;
     border-radius: 5px;
     padding: 2%;
     position: absolute;
