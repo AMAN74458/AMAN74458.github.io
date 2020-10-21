@@ -73,7 +73,7 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }*/
 
-document.getElementById('joinNow').onclick = function() {
+/*document.getElementById('joinNow').onclick = function() {
   document.getElementById('SignupPopupContainer').style.display = 'block';
 };
 
@@ -87,5 +87,32 @@ document.getElementById('Login').onclick = function() {
 
 document.getElementById('close-login-popup').onclick = function() {
   document.getElementById('LoginPopupContainer').style.display = 'none';
+};*/
+
+document.getElementById('joinNow').onclick = function() {
+  document.getElementById('SignupPopupContainer').style.display = 'block';
 };
+
+/*document.getElementById('close-signup-popup').onclick = function() {
+  document.getElementById('SignupPopupContainer').style.display = 'none';
+};*/
+
+document.getElementById('Login').onclick = function() {
+  document.getElementById('LoginPopupContainer').style.display = 'block';
+};
+
+/*document.getElementById('close-login-popup').onclick = function() {
+  document.getElementById('LoginPopupContainer').style.display = 'none';
+};*/
+
+document.getElementById('SignupPopupContainer').addEventListener('click', function() {
+  console.log('working')
+  document.getElementById('LoginPopupContainer').style.display = 'none'
+  document.getElementById('SignupPopupContainer').style.display = 'none';
+})
+
+document.getElementById('LoginPopupContainer').addEventListener('click', function() {
+  console.log('working')
+  document.getElementById('LoginPopupContainer').style.display = 'none'
+})
 
