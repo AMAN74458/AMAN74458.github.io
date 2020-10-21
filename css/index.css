@@ -1,5 +1,5 @@
 /* copyrights BTC all rights reserved */
-/* developer AMAN KUMAR v-0.1 */
+/* developer AMAN KUMAR v-0.2 */
 
 
 html, body {
@@ -512,7 +512,8 @@ footer a:hover.light-footer-link-mode {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #EDF0F1;
+    /*background-color: #EDF0F1;*/
+    background-color: #333646c2;
     height: 100%;
     width: 100%;
     overflow: auto;
@@ -525,7 +526,8 @@ footer a:hover.light-footer-link-mode {
     top: 15px;
     left: 95%;
     font-size: 2em;
-    color: rgb(160, 30, 30);
+    /*color: rgb(160, 30, 30);*/
+    color: #db3236;
     text-decoration: none!important;
 }
 
@@ -538,7 +540,8 @@ footer a:hover.light-footer-link-mode {
     left: 50%;
     transform: translate(-50%,-50%);
     height: auto;
-    box-shadow: 0 0 15px 8px #e7e6e6;
+    /*box-shadow: 0 0 15px 8px #e7e6e6;*/
+    box-shadow: 0 0 15px 8px #25273434;
 }
 
 .popup-buttons-signup {
