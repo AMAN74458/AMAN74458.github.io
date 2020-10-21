@@ -73,46 +73,24 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }*/
 
-/*document.getElementById('joinNow').onclick = function() {
-  document.getElementById('SignupPopupContainer').style.display = 'block';
-};
-
-document.getElementById('close-signup-popup').onclick = function() {
-  document.getElementById('SignupPopupContainer').style.display = 'none';
-};
-
-document.getElementById('Login').onclick = function() {
-  document.getElementById('LoginPopupContainer').style.display = 'block';
-};
-
-document.getElementById('close-login-popup').onclick = function() {
-  document.getElementById('LoginPopupContainer').style.display = 'none';
-};*/
-
 document.getElementById('joinNow').onclick = function() {
   document.getElementById('SignupPopupContainer').style.display = 'block';
 };
 
-/*document.getElementById('close-signup-popup').onclick = function() {
-  document.getElementById('SignupPopupContainer').style.display = 'none';
-};*/
-
 document.getElementById('Login').onclick = function() {
   document.getElementById('LoginPopupContainer').style.display = 'block';
 };
 
-/*document.getElementById('close-login-popup').onclick = function() {
-  document.getElementById('LoginPopupContainer').style.display = 'none';
-};*/
+var signupModal = document.getElementById('SignupPopupContainer')
+var loginModal = document.getElementById('LoginPopupContainer')
 
-document.getElementById('SignupPopupContainer').addEventListener('click', function() {
-  console.log('working')
-  document.getElementById('LoginPopupContainer').style.display = 'none'
-  document.getElementById('SignupPopupContainer').style.display = 'none';
-})
+window.onclick = function(event) {
+  if (event.target == signupModal) {
+    signupModal.style.display = "none";
+  }
+  else if(event.target == loginModal) {
+    loginModal.style.display = "none";
+  }
+}
 
-document.getElementById('LoginPopupContainer').addEventListener('click', function() {
-  console.log('working')
-  document.getElementById('LoginPopupContainer').style.display = 'none'
-})
 
