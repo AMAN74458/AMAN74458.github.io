@@ -5,7 +5,8 @@
 html, body {
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
-    background-color: #333646;
+    /* background-color: #333646; */
+    background-color: #212121;
 }
 
 
@@ -17,6 +18,7 @@ html, body {
 .navbar-custom {
     border-top: 5px solid #1FCC8E;
     padding: 40px 10%;
+    animation: onLoadFadeIn ease-in 2s;
 }
 
 .brand-logo {
@@ -87,10 +89,12 @@ input:checked~.custom-control-label::before {
 
 .navbar.scrolled {
     border-top: 2px solid #1FCC8E;
-    background-color: #333646 !important;
+    background-color: #181818!important;
+    /* background-color: #333646 !important; */
     /*background-color: #E1E1E1;*/
     padding: 18px 8% 15px 8% !important;
-    box-shadow: -2px 2px 8px -5px #141313;
+    /* box-shadow: -2px 2px 8px -5px #141313; */
+    box-shadow: -2px 2px 8px -5px #000000;
     transition: all 400ms linear;
 }
   
@@ -266,13 +270,214 @@ input:checked~.custom-control-label::before {
     min-height: 60vh;
     margin-top: 140px;
     padding: 80px 5%;
+    animation: onLoadFadeIn ease-in 2s;
 }
+
+/* working background style */
+/*.wrking-bg {
+    position: relative;
+    height: auto;
+}
+
+#a1 {
+    color: rgb(240, 12, 12);
+    position: absolute;
+    top: 40px;
+    left: 0;
+    font-size: 2em;
+    animation: fadeInOut 2s linear infinite;
+}
+
+#a2 {
+    color: rgb(39, 138, 82);
+    position: absolute;
+    top: 0;
+    left: 60px
+    font-size: 0.9em;
+    animation: fadeInOut 1.8s linear infinite;
+}
+
+#a3 {
+    color: rgb(149, 202, 42);
+    position: absolute;
+    top: 170px;
+    left: 75px;
+    font-size: 1.5em;
+    animation: fadeInOut 1.3s ease-out infinite;
+}
+
+#a4 {
+    color: rgb(238, 238, 16);
+    position: absolute;
+    top: 100px;
+    left: 235px;
+    font-size: 0.5em;
+    animation: fadeInOut 1.8s linear infinite;
+}
+
+#a5 {
+    color: rgb(243, 93, 66);
+    position: absolute;
+    top: 240px;
+    left: 295px;
+    font-size: 2em;
+    animation: fadeInOut 2s linear infinite;
+}
+
+#a6 {
+    color: rgb(9, 129, 129);
+    position: absolute;
+    top: 400px;
+    left: 205px;
+    font-size: 0.8em;
+    animation: fadeInOut 1.5s linear infinite;
+}
+
+#a7 {
+    color: rgb(199, 171, 199);
+    position: absolute;
+    top: 450px;
+    left: -60px;
+    font-size: 0.5em;
+    animation: fadeInOut 1.5s ease-out infinite;
+}
+
+#a8 {
+    color: rgb(54, 221, 204);
+    position: absolute;
+    top: 90px;
+    left: 580px;
+    font-size: 2em;
+    animation: fadeInOut 1.4s ease-in infinite;
+}
+
+#a9 {
+    color: rgb(243, 215, 164);
+    position: absolute;
+    top: 0;
+    left: 700px;
+    font-size: 2em;
+    animation: fadeInOut 1.8s ease-in infinite;
+}
+
+#a10 {
+    color: rgb(228, 226, 226);
+    font-size: 0.9em;
+    position: absolute;
+    top: 420px;
+    left: 900px;
+    animation: fadeInOut 1.3s ease-in infinite;
+}
+
+#a11 {
+    color: #55bd97;
+    position: absolute;
+    top: 390px;
+    left: 1000px;
+    animation: fadeInOut 1.1s ease-in infinite;
+}
+
+#a12 {
+    color: rgb(240, 12, 12);
+    position: absolute;
+    top: 180px;
+    left: 850px;
+    font-size: 1.5em;
+    animation: fadeInOut 1.6s ease-in infinite;
+}
+
+#a13 {
+    color: rgb(240, 12, 12);
+    position: absolute;
+    top: 280px;
+    left: 700px;
+    font-size: 0.8em;
+    animation: fadeInOut 1.6s ease-in infinite;
+}
+
+#a14 {
+    color: rgb(238, 238, 16);
+    position: absolute;
+    top: 50px;
+    left: 1020px;
+    animation: fadeInOut 1.2s ease infinite;
+}
+
+#a15 {
+    color: rgb(238, 238, 16);
+    position: absolute;
+    top: 320px;
+    left: 280px;
+    font-size: 1.8em;
+    animation: fadeInOut 1.4s ease-in infinite;
+}*/
+
+/*@keyframes fadeInOut {
+    0% {
+        transform: scale(0);
+    }
+
+    20% {
+        transform: scale(0.2);
+    }
+
+    40% {
+        transform: scale(0.4);
+    }
+
+    60% {
+        transform: scale(0.6);
+    }
+
+    80% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.2;
+    }
+
+    40% {
+        opacity: 0.4;
+    }
+
+    60% {
+        opacity: 0.6;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}*/
 
 .sect-1-sub-left-content h1 {
     color: #e7e7e7;
     font-family: 'Open Sans', sans-serif;
     font-size: 7em;
     letter-spacing: 1px;
+}
+
+.blinking-cursor {
+    color: #e7e7e7;
+    animation: blink 1.4s steps(2, start) infinite;
+    animation-delay: 2s;
+}
+
+@keyframes blink {
+    to {
+      visibility: hidden;
+    }
 }
 
 #sect-1-canvas {
@@ -284,6 +489,7 @@ input:checked~.custom-control-label::before {
 .banner-sub-stm {
     margin-top: 30px;
     color: #e7e7e7;
+    font-weight: 500;
 }
 
 .banner-sub-stm span {
@@ -320,30 +526,41 @@ input:checked~.custom-control-label::before {
 
 .login-join-btn button {
     margin-top: 36px;
-    border: 2px solid #1FCC8E;
+    border-radius: 50px;
     font-weight: 600;
-    color: #e7e7e7;
     letter-spacing: 1px;
     box-shadow: none!important;
 }
 
-.login-btn {
-    width: 97.88px;
-    background-color: #1FCC8E;
+.join-now-btn {
+    border: 2px solid #1FCC8E;
+    color: #1FCC8E;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .join-now-btn:hover {
-    background-color: #e7e7e7;
+    /* background-color: #e7e7e7; */
+    background-color: #1FCC8E;
+    color: #212121;
+    border: 2px solid #1FCC8E;
+    transform: translateY(-5px);
+    transition: all 0.7s ease;
+}
+
+.login-btn {
+    width: 97.88px;
     color: #000000;
+    background-color: #e7e7e7;
     border: 2px solid #e7e7e7;
-    transition: all 0.3s ease-in;
 }
 
 .login-btn:hover {
-    background-color: #333646;
     color: #e7e7e7;
+    background-color: #212121;
     border: 2px solid #e7e7e7;
-    transition: all 0.3s ease-in;
+    transform: translateY(-5px);
+    transition: all 0.7s ease;
 }
 
 .join-now-btn:active, .login-btn:active {
@@ -357,10 +574,12 @@ input:checked~.custom-control-label::before {
 /*===============================================================================================================*/
 
 footer {
-    min-height: 34vh;
+    /* min-height: 34vh; */
     margin-top: 20px;
-    padding: 110px 10% 0 10%;
-    background-color: #252734;
+    padding: 110px 10% 2% 10%;
+    /* background-color: #252734; */
+    background-color: #181818;
+    animation: onLoadFadeIn ease-in 2s;
 }
 
 footer ul {
@@ -404,6 +623,16 @@ footer a:hover {
     padding-top: 35px;
     padding-bottom: 20px;
     color: #c9c7c7;
+}
+
+/* when page load this effect will work */
+@keyframes onLoadFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 
@@ -518,8 +747,20 @@ footer a:hover.light-footer-link-mode {
     overflow: auto;
     z-index: 2000;
     display: none;
+    animation: scaleUp ease-in 0.2s;
 }
 
+/* when join-now or login button is clicked then this animation will be applied to popup container*/
+@keyframes scaleUp {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* tag not present in index html */
 .close-icon {
     position: relative;
     top: 15px;
@@ -528,9 +769,10 @@ footer a:hover.light-footer-link-mode {
     color: rgb(160, 30, 30);
     text-decoration: none!important;
 }
+/* above css end */
 
 .popup-body {
-    background-color: #252734f6;
+    background-color: #212121;
     border-radius: 5px;
     padding: 2%;
     position: absolute;
@@ -538,7 +780,7 @@ footer a:hover.light-footer-link-mode {
     left: 50%;
     transform: translate(-50%,-50%);
     height: auto;
-    box-shadow: 0 0 15px 8px #25273434;
+    box-shadow: 15px 18px #0505056b;
     z-index: 50000;
 }
 
@@ -589,7 +831,7 @@ footer a:hover.light-footer-link-mode {
 }*/
 
 .github-btn {
-    background-color: #333646;
+    background-color: #0c0c0c;
 }
 
 
@@ -633,9 +875,9 @@ footer a:hover.light-footer-link-mode {
         padding-right: 15px;
     }
 
-    footer {
+    /*footer {
         min-height: 40vh!important;
-    }
+    } */
 
     .footer-copyright {
         text-align: center;
