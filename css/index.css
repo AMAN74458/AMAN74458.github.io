@@ -7,14 +7,94 @@ html, body {
     font-weight: 700;
     /* background-color: #333646; */
     background-color: #212121;
+    transition: background-color 1s ease;
 }
 
+/* ******************************************************************************************************************* */
+/*                                                                                                                     */
+/*                                           DARK-LIGHT MODE TOGGLE SWITCH STYLE                                       */
+/*                                                                                                                     */
+/* ******************************************************************************************************************* */
 
-/*==================================================== Dark Mode ================================================*/
-/*==================================================== Dark Mode ================================================*/
-/*==================================================== Dark Mode ================================================*/
-/*==================================================== Dark Mode ================================================*/
+.theme-toggle-btn {
+    position: fixed;
+    /* bottom: 120px; */
+    bottom: 30px;
+    /* right: 100px; */
+    right: 30px;
+    animation: goOut ease 3.5s infinite;
+    animation-delay: 2s;
+    transition: all 0.3s ease;
+}
 
+.theme-toggle-btn:hover {
+    animation: none;
+}
+/* buttons */
+.light-theme, .dark-theme {
+    background-color: #ffffff;
+    border-radius: 100%;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border: none!important;
+    outline: none!important;
+    border: none!important;
+}
+/* light-theme button show when dark mode is active */
+.light-theme {
+    animation: zoomIn ease 0.6s;
+}
+/* dark-theme button show when light mode is active */
+.dark-theme {
+    display: none;
+    background-color: #303030;
+    animation: zoomIn ease 0.6s;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+#dark-mode-icon {
+    width: 26px;
+    fill: #ffffff;
+}
+
+@keyframes goOut {
+    0% {
+        transform: translateY(5px);
+        opacity: 0.1;
+    }
+    50% {
+        transform: translateY(-15px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(5px);
+        opacity: 0.1;
+    }
+}
+
+/* ******************************************************************************************************************* */
+/*                                                                                                                     */
+/*                                     ENDING DARK-LIGHT MODE TOGGLE SWITCH STYLE                                      */
+/*                                                                                                                     */
+/* ******************************************************************************************************************* */
+
+
+/* ******************************************************************************************************************* */
+/*                                                                                                                     */
+/*                                          DEFAULT DARK MODE AND CUSTOM STYLE                                         */
+/*                                                                                                                     */
+/* ******************************************************************************************************************* */
+
+/* NAVBAR STYLING */
 .navbar-custom {
     border-top: 5px solid #1FCC8E;
     padding: 40px 10%;
@@ -58,35 +138,7 @@ html, body {
     color: #1FCC8E !important;
 }
 
-.toggle-switch {
-    position: relative;
-    top: 11px;
-    left: 15px;
-}
-
-.custom-switch label {
-    color: #c4c4c4;
-}
-
-input:checked~.custom-control-label::before {
-    border-color: #1FCC8E!important;
-    background-color: #1FCC8E!important;
-    box-shadow: none!important;
-}
-
-.custom-control-label::before {
-    box-shadow: none!important;
-}
-
-.custom-switch label:hover, .custom-switch label:active {
-    color: #1FCC8E;
-}
-
-/*===============================================================================================================*/
-/*===============================================================================================================*/
-/*===============================================================================================================*/
-/*===============================================================================================================*/
-
+/* NAVBAR STYLING AFTER PAGE IS SCROLLED */
 .navbar.scrolled {
     border-top: 2px solid #1FCC8E;
     background-color: #181818!important;
@@ -127,11 +179,9 @@ input:checked~.custom-control-label::before {
 .navbar.scrolled #active-link-icon {
     top: 50%;
 }
+/* ENDING NAVBAR STYLING AFTER PAGE IS SCROLLED */
 
-/*------------------------------Toggler icon-----------------------------------*/
-/*-----------------------------Triggered when---------------------------------*/
-/*---------------------------screen size reduced-------------------------------*/
-
+/* NAVBAR TOGGLE BUTTON STYLING ON SMALL SCREEN */
 .navbar-toggler {
     outline: none !important;
 }
@@ -146,7 +196,6 @@ input:checked~.custom-control-label::before {
 }
 
 /* Menu toggle button */
-
 .icon {
       line-height: 0;
 }
@@ -201,11 +250,9 @@ input:checked~.custom-control-label::before {
 .toggler-btn {
     z-index: 1;
 }
-  
-/*------------------------------Toggler icon-----------------------------------*/
-/*---------------------------------Styling-------------------------------------*/
-/*-----------------------------------end---------------------------------------*/
-  
+/* ENDING NAVBAR TOGGLE BUTTON STYLING ON SMALL SCREEN */
+
+/* NAVBAR LINK STYLING ON SMALL SCREEN */
 .collapsing {
     -webkit-transition: none;
     transition: none;
@@ -256,16 +303,12 @@ input:checked~.custom-control-label::before {
     margin: 20px;
 }
 
-
 .navbar-collapse.collapse.show .custom-control {
     padding-left: 0;
 }
-  
-/*===============================================================================================================*/
-/*===============================================================================================================*/
-/*===============================================================================================================*/
-/*===============================================================================================================*/
+/* ENDING NAVBAR LINK STYLING ON SMALL SCREEN */
 
+/* SECTION 1 STYLING */
 .section-1 {
     min-height: 60vh;
     margin-top: 140px;
@@ -461,6 +504,7 @@ input:checked~.custom-control-label::before {
     }
 }*/
 
+/* SUB-SECTION 1 LEFT ON STYLING */
 .sect-1-sub-left-content h1 {
     color: #e7e7e7;
     font-family: 'Open Sans', sans-serif;
@@ -469,6 +513,7 @@ input:checked~.custom-control-label::before {
 }
 
 .blinking-cursor {
+    cursor: default;
     color: #e7e7e7;
     animation: blink 1.4s steps(2, start) infinite;
     animation-delay: 2s;
@@ -480,7 +525,7 @@ input:checked~.custom-control-label::before {
     }
 }
 
-#sect-1-canvas {
+#canvas-sl1 {
     width: 120px;
     height: 10px;
     border-radius: 5px;
@@ -499,7 +544,9 @@ input:checked~.custom-control-label::before {
     color: #1FCC8E;
     font-size: 2em;
 }
+/* ENDING SUB-SECTION 1 ON LEFT STYLING */
 
+/* SUB-SECTION 1 ON RIGHT STYLING */
 .sect-1-sub-right-content {
     padding: 20px 0 0 8%;
 }
@@ -524,6 +571,7 @@ input:checked~.custom-control-label::before {
     font-weight: 300;
 }
 
+/* LOGIN-JOIN BUTTON STYLIING */
 .login-join-btn button {
     margin-top: 36px;
     border-radius: 50px;
@@ -537,6 +585,7 @@ input:checked~.custom-control-label::before {
     color: #1FCC8E;
     padding-left: 15px;
     padding-right: 15px;
+    transition: all 0.7s ease;
 }
 
 .join-now-btn:hover {
@@ -553,6 +602,7 @@ input:checked~.custom-control-label::before {
     color: #000000;
     background-color: #e7e7e7;
     border: 2px solid #e7e7e7;
+    transition: all 0.7s ease;
 }
 
 .login-btn:hover {
@@ -567,176 +617,10 @@ input:checked~.custom-control-label::before {
     transform: scale(0.9);
     transition: transform 0.5s ease-out;
 }
+/* ENDING LOGIN-JOIN BUTTON STYLIING */
+/* ENDING SUB-SECTION 1 ON RIGHT STYLING */
 
-/*===============================================================================================================*/
-/*===============================================================================================================*/
-/*===============================================================================================================*/
-/*===============================================================================================================*/
-
-footer {
-    /* min-height: 34vh; */
-    margin-top: 20px;
-    padding: 110px 10% 2% 10%;
-    /* background-color: #252734; */
-    background-color: #181818;
-    animation: onLoadFadeIn ease-in 2s;
-}
-
-footer ul {
-    display: inline;
-}
-
-.footer-container {
-    padding: 5% 0 0 0!important;
-}
-  
-.footer-flex {
-    width: 100%;
-    margin-left: 0!important;
-    margin-right: 0!important;
-}
-
-.copyright-sect {
-    color: #f4f4f4;
-}
-
-footer ul li {
-    display: inline-block;
-}
-  
-footer a {
-    color: #c4c4c4;
-    font-weight: 300;
-}
-  
-footer a:hover {
-    text-decoration: none;
-    color: #1FCC8E;
-    transition: color 0.4s ease;
-}
-
-.footer-copyright span {
-    font-weight: 300;
-}
-
-.made-in-india {
-    padding-top: 35px;
-    padding-bottom: 20px;
-    color: #c9c7c7;
-}
-
-/* when page load this effect will work */
-@keyframes onLoadFadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-
-/*================================================ Experimental =================================================*/
-/*================================================= Light Mode ==================================================*/
-/*================================================= Light Mode ==================================================*/
-/*================================================= Light Mode ==================================================*/
-
-
-.lightbg-mode {
-    background-color: #f1f1f1;
-}
-
-.top-links.light-top-link-mode {
-    font-size: 1.2em;
-    color: #252734;
-    font-weight: 600;
-}
-
-label.light-label-mode {
-    color: #252734;
-}
-
-.navbar.scrolled.light-navbar-scrolled-mode {
-    background-color: #f1f1f1!important;
-    padding: 18px 8% 15px 8% !important;
-    box-shadow: -2px 2px 8px -5px #141313;
-    transition: all 400ms linear;
-}
-
-.navbar.scrolled .top-links.light-top-scrolled-link-mode {
-    color: #252734;
-}
-
-.navbar.light-navbar-mode {
-    background-color: #f1f1f1;
-}
-
-.navbar-collapse.collapse.show.light-collapsed-bg {
-    background-color: #f4f4f4fb;
-}
-
-.navbar.scrolled .show .top-links.light-top-show-scrolled-link-mode {
-    color: #252734;
-}
-
-.section-1.light-section-1-mode {
-    background-color: #f1f1f1;
-}
-
-.sect-1-sub-left-content h1.light-h1-mode {
-    color: #000000;
-}
-
-.banner-sub-stm.light-p-mode {
-    color: #313131;
-}
-
-.sect-1-sub-right-content span.light-span-mode {
-    color: #757575;;
-}
-
-.sect-1-sub-right-content h5.light-h5-mode {
-    color: #686868;
-}
-
-.sect-1-sub-right-content p.light-p-subrt-mode {
-    color: #8d8d8d;
-}
-
-.login-join-btn button.light-join-btn-mode {
-    color: #1FCC8E;
-}
-
-.login-join-btn button.light-join-btn-mode:hover {
-    color: #000000;
-}
-
-footer.light-footer-mode {
-    background-color: #dadada;
-}
-
-.copyright-sect.light-copyright-mode {
-    color: #000000;
-}
-
-footer a.light-footer-link-mode {
-    color: #000000;
-}
-
-footer a:hover.light-footer-link-mode {
-    color: #1FCC8E;
-}
-
-.light-made-in-india-mode {
-    color: #000000;
-    font-size: 1.2em;
-}
-
-/*================================================= popup-signup =================================================*/
-/*================================================= popup-signup =================================================*/
-/*================================================= popup-signup =================================================*/
-/*================================================= popup-signup =================================================*/
-
+/* POPUP STYLING */
 .popup-container {
     position: fixed;
     top: 0;
@@ -748,6 +632,7 @@ footer a:hover.light-footer-link-mode {
     z-index: 2000;
     display: none;
     animation: scaleUp ease-in 0.2s;
+    overflow: hidden!important;
 }
 
 /* when join-now or login button is clicked then this animation will be applied to popup container*/
@@ -759,17 +644,6 @@ footer a:hover.light-footer-link-mode {
         transform: scale(1);
     }
 }
-
-/* tag not present in index html */
-.close-icon {
-    position: relative;
-    top: 15px;
-    left: 95%;
-    font-size: 2em;
-    color: rgb(160, 30, 30);
-    text-decoration: none!important;
-}
-/* above css end */
 
 .popup-body {
     background-color: #212121;
@@ -852,11 +726,199 @@ footer a:hover.light-footer-link-mode {
 .p1 a {
     color: #1FCC8E;
 }
+/* ENDING POPUP STYLING */
 
-/*================================================= Media Query =================================================*/
-/*================================================= Media Query =================================================*/
-/*================================================= Media Query =================================================*/
-/*================================================= Media Query =================================================*/
+/* FOOTER STYLING */
+footer {
+    /* min-height: 34vh; */
+    margin-top: 20px;
+    padding: 110px 10% 2% 10%;
+    /* background-color: #252734; */
+    background-color: #181818;
+    animation: onLoadFadeIn ease-in 2s;
+    transition: background-color 1s ease;
+}
+
+/* FOOTER LINK STYLING */
+footer ul {
+    display: inline;
+}
+
+.footer-container {
+    padding: 5% 0 0 0!important;
+}
+  
+.footer-flex {
+    width: 100%;
+    margin-left: 0!important;
+    margin-right: 0!important;
+}
+
+.copyright-sect {
+    color: #f4f4f4;
+}
+
+footer ul li {
+    display: inline-block;
+}
+  
+footer a {
+    color: #c4c4c4;
+    font-weight: 300;
+}
+  
+footer a:hover {
+    text-decoration: none;
+    color: #1FCC8E;
+    transition: color 0.4s ease;
+}
+/* ENDING FOOTER LINK STYLING */
+
+.footer-copyright span {
+    font-weight: 300;
+}
+
+.made-in-india {
+    padding-top: 35px;
+    padding-bottom: 20px;
+    color: #c9c7c7;
+}
+/* ENDING FOOTER STYLING */
+
+/* when page load this effect will work */
+@keyframes onLoadFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ******************************************************************************************************************* */
+/*                                                                                                                     */
+/*                                    DEFAULT DARK MODE AND CUSTOM STYLE ENDING                                        */
+/*                                                                                                                     */
+/* ******************************************************************************************************************* */
+
+/* ******************************************************************************************************************* */
+/*                                                                                                                     */
+/*                                                    LIGHT MODE STYLE                                                 */
+/*                                                                                                                     */
+/* ******************************************************************************************************************* */
+
+/* applied in html and body tag */
+.light-mode {
+    background-color: #ffffff;
+}
+/* applied in nav links, (tplink = top-link) */
+.top-links.tplnk-light-mode {
+    font-size: 1.2em;
+    color: #252734;
+    font-weight: 600;
+}
+.top-links.top-links.tplnk-light-mode:hover {
+    color: #1FCC8E;
+}
+/* applied on navbar, (ns = navbar-scrolled) */
+.navbar.scrolled.ns-light-mode {
+    background-color: #ffffff!important;
+    box-shadow: 0 0 4px 2px #dfdfdf;
+}
+/* applied after page scrolled, (tplnkscrd = top-link-scrolled) */
+.navbar.scrolled .top-links.tplnkscrd-light-mode {
+    /* color: #252734; */
+    color: #212121;
+}
+/* applied on collapsed menu, (colpsdbg = collapsed background) */
+.navbar-collapse.collapse.show.colpsdbg-light-mode {
+    background-color: #f4f4f4fb;
+}
+/* applied on after scroll collapsed link */
+.navbar.scrolled .show .top-links.colpsd-tplnk-light-mode {
+    color: #252734;
+}
+/* applied on h1 of sub-sect1 left, (sect1 = section 1, lft = left) */
+.sect-1-sub-left-content h1.h1-sect1-lft-light-mode {
+    color: #181818;
+}
+/* blinking cursor, (blinkcur = blinking cursor) */
+.sect-1-sub-left-content span.blinking-cursor.blinkcur-light-mode {
+    color: #212121;
+}
+/* applied on p of sub-sect1 left */ 
+.banner-sub-stm.p-sect1-lft-light-mode {
+    color: #252525;
+}
+/* applied on span of sub-sect1 right, (sect1 = section 1, rgt = right) */
+.sect-1-sub-right-content span.span-sect1-rgt-light-mode {
+    color: #494949;;
+}
+/* applied on h5 of sub-sect1 right */
+.sect-1-sub-right-content h5.h5-sect1-rgt-light-mode {
+    color: #3f3f3f;
+}
+/* applied on p of sub-sect1 right */
+.sect-1-sub-right-content p.p-sect1-rgt-light-mode {
+    color: #303030;
+}
+/*applied on join now button NEED IMPROVEMENT */
+.login-join-btn button.joinnow-btn-light-mode {
+    color: #1FCC8E;
+}
+/* effect on hovering join now button */
+.login-join-btn button.joinnow-btn-light-mode:hover {
+    color: #ffffff;
+}
+/* applied on login button */
+.login-join-btn button.login-btn-light-mode {
+    color: #ffffff;
+    background-color: #212121;
+    border: 2px solid #212121;
+}
+/* effect on hovering login buttton */
+.login-join-btn button.login-btn-light-mode:hover {
+    color: #212121;
+    background-color: #ffffff;
+    border: 2px solid #212121;
+}
+/* applied on footer */
+footer.footer-light-mode {
+    background-color: #f3f3f3;
+}
+/* applied on copyright text (cpyrgt = copyright) */
+.copyright-sect.cpyrgt-light-mode {
+    color: #212121;
+}
+/* applied on links in footer, (ftlink = footer-link) */
+footer a.ftlink-light-mode {
+    color: #212121;
+}
+/* effects on hovering links of footer */
+footer a.ftlink-light-mode:hover {
+    color: #1FCC8E;
+}
+/* applied on made in india text */
+.cntry-IN-light-mode {
+    color: #212121;
+    font-size: 1.2em;
+}
+/* applied on social icon in footer */
+footer a.ftsocial-icon {
+    color: #212121;
+}
+
+/* ******************************************************************************************************************* */
+/*                                                                                                                     */
+/*                                              LIGHT MODE STYLE ENDING                                                */
+/*                                                                                                                     */
+/* ******************************************************************************************************************* */
+
+/* ******************************************************************************************************************* */
+/*                                                                                                                     */
+/*                                                       MEDIA QUERY                                                   */
+/*                                                                                                                     */
+/* ******************************************************************************************************************* */
 
 @media only screen and (max-width: 1080px) {
 
