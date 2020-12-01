@@ -1,5 +1,5 @@
 /* copyrights BTC all rights reserved */
-/* developer AMAN KUMAR v-0.3 */
+/* developer AMAN KUMAR v-0.3.2 */
 
 
 html, body {
@@ -16,19 +16,32 @@ html, body {
 /*                                                                                                                     */
 /* ******************************************************************************************************************* */
 
-.theme-toggle-btn {
-    position: fixed;
-    /* bottom: 120px; */
-    bottom: 30px;
-    /* right: 100px; */
-    right: 30px;
-    animation: goOut ease 3.5s infinite;
-    animation-delay: 2s;
-    transition: all 0.3s ease;
-}
+/* 'CSS4' if primary input of device is mouse or trackpad */
+@media (pointer: fine) {
+    .theme-toggle-btn {
+        position: fixed;
+        /* bottom: 120px; */
+        bottom: 30px;
+        /* right: 100px; */
+        right: 30px;
+        animation: goOut ease 3.5s infinite;
+        animation-delay: 2s;
+        transition: all 0.3s ease;
+        z-index: 2000;
+    }
 
-.theme-toggle-btn:hover {
-    animation: none;
+    .theme-toggle-btn:hover {
+        animation: none;
+    }
+}
+/* 'CSS4' if primary input of device is touch */
+@media (pointer: coarse) {
+    .theme-toggle-btn {
+        position: fixed;
+        bottom: 70px;
+        right: 70px;
+        z-index: 20000;
+    }
 }
 /* buttons */
 .light-theme, .dark-theme {
@@ -140,7 +153,7 @@ html, body {
 
 /* NAVBAR STYLING AFTER PAGE IS SCROLLED */
 .navbar.scrolled {
-    border-top: 2px solid #1FCC8E;
+    border-top: 3px solid #1FCC8E;
     background-color: #181818!important;
     /* background-color: #333646 !important; */
     /*background-color: #E1E1E1;*/
@@ -267,7 +280,7 @@ html, body {
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    background-color: #252734fd;
+    background-color: #000000fd;
     /*background-color: rgba(31, 204, 141, 0.699);*/
 }
 
@@ -626,10 +639,11 @@ html, body {
     top: 0;
     left: 0;
     background-color: #181818d8;
+    backdrop-filter: blur(2px);
     height: 100%;
     width: 100%;
     overflow: auto;
-    z-index: 2000;
+    z-index: 20000;
     display: none;
     animation: scaleUp ease-in 0.2s;
     overflow: hidden!important;
@@ -646,7 +660,7 @@ html, body {
 }
 
 .popup-body {
-    background-color: #212121;
+    background-color: #2b2b2b;
     border-radius: 5px;
     padding: 2%;
     position: absolute;
@@ -654,49 +668,39 @@ html, body {
     left: 50%;
     transform: translate(-50%,-50%);
     height: auto;
-    box-shadow: 15px 18px #0505056b;
+    box-shadow: 15px 18px #11111193;
     z-index: 50000;
 }
 
 .popup-buttons-signup {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    padding: 2%;
 }
 
-.popup-buttons-signup svg {
-    width: 5%;
+.sgithub-container, .sgoogle-container {
+    margin: 20px 0;
 }
 
 .popup-btns {
-    width: 400px;
+    width: 350px;
     color: #ffffff;
-    font-weight: 600;
-    box-shadow: none!important;
-}
-
-.popup-btns:hover {
-    color: #ffffff;
-}
-
-.popup-btns:active {
-    transform: scale(0.9);
-    transition: transform 0.5s ease;
+    font-weight: 500;
+    border-radius: 50px;
+    /* box-shadow: none!important; */
 }
 
 .github-icon-btn {
     position: relative;
-    top: 32px;
-    left: -160px;
+    width: 7%;
+    top: -2px;
+    left: -70px;
     fill: #ffffff;
 }
 
 .google-icon-btn {
     position: relative;
-    top: 32px;
-    left: -160px;
+    width: 6%;
+    top: -2px;
+    left: -70px;
     fill: #ffffff;
 }
 
@@ -705,16 +709,72 @@ html, body {
 }*/
 
 .github-btn {
-    background-color: #0c0c0c;
+    background-color: #141414;
+    border: 2px solid #141414;
+    transition: all 0.5s ease;
 }
 
+.github-btn:hover {
+    color: #ffffff;
+    background-color: #2b2b2b;
+    border: 2px solid #141414;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    box-shadow:
+    0 2px 2px rgba(0, 0, 0, 0.034),
+    0 6px 5px rgba(0, 0, 0, 0.048),
+    0 1px 1px rgba(0, 0, 0, 0.06),
+    0 2px 1.9px rgba(0, 0, 0, 0.072),
+    0 4px 3px rgba(0, 0, 0, 0.086),
+    0 10px 8px rgba(0, 0, 0, 0.12);
+}
 
 .google-btn {
-    background-color: rgb(219, 31, 31);
+    background-color: #ea4335;
+    border: 2px solid #ea4335;
+    transition: all 0.5s ease;
+}
+
+.google-btn:hover {
+    color: #ffffff;
+    background-color: #2b2b2b;
+    border: 2px solid #ea4335;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    box-shadow:
+    0 2px 2px rgba(0, 0, 0, 0.034),
+    0 6px 5px rgba(0, 0, 0, 0.048),
+    0 1px 1px rgba(0, 0, 0, 0.06),
+    0 2px 1.9px rgba(0, 0, 0, 0.072),
+    0 4px 3px rgba(0, 0, 0, 0.086),
+    0 10px 8px rgba(0, 0, 0, 0.12);
 }
 
 .email-btn {
     background-color: #1FCC8E;
+    border: 2px solid #1FCC8E;
+    transition: all 0.5s ease;
+}
+
+.email-btn:hover {
+    color: #ffffff;
+    background-color: #2b2b2b;
+    border: 2px solid #1FCC8E;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    box-shadow:
+    0 2px 2px rgba(0, 0, 0, 0.034),
+    0 6px 5px rgba(0, 0, 0, 0.048),
+    0 1px 1px rgba(0, 0, 0, 0.06),
+    0 2px 1.9px rgba(0, 0, 0, 0.072),
+    0 4px 3px rgba(0, 0, 0, 0.086),
+    0 10px 8px rgba(0, 0, 0, 0.12);
+}
+
+.popup-btns:active {
+    box-shadow: none;
+    transform: scale(0.9);
+    transition: transform 0.5s ease;
 }
 
 .p1 {
@@ -931,7 +991,7 @@ footer a.ftsocial-icon {
     }
 }
 
-@media only screen and (max-width: 766px) {
+@media only screen and (max-width: 768px) {
     .sect-1-sub-right-content {
         padding-left: 15px;
         padding-right: 15px;
@@ -951,27 +1011,27 @@ footer a.ftsocial-icon {
     }
 
     .popup-buttons-signup svg {
-        width: 15px;
+        width: 18px;
     }
     
     .popup-btns {
         width: 280px!important;
         color: #ffffff;
-        font-weight: 600;
+        font-weight: 500;
         box-shadow: none!important;
     }
 
     .github-icon-btn {
         position: relative;
-        top: 27px;
-        left: -115px;
+        top: -2px;
+        left: -35px;
         fill: #ffffff;
     }
     
     .google-icon-btn {
         position: relative;
-        top: 27px;
-        left: -115px;
+        top: -2px;
+        left: -35px;
         fill: #ffffff;
     }
 

@@ -1,25 +1,3 @@
-/*function scrollWin() {
-    //window.scrollTo(500, 0);
-
-//alert('window.pageXOffset= '+window.pageXOffset + '\nwindow.pageYOffset='+ window.pageYOffset);
-
-    var el= document.getElementsByClassName('header');
-    if(window.pageXOffset >= 90)
-    {   
-        el.style.backgroundColor='turquoise';
-    }
-    if(window.pageXOffset < 0)
-    {   
-        el.style.backgroundColor='pink';
-    }
-}*/
-
-AOS.init({
-    duration: 1200,
-})
-
-
-
 var ulContainer = document.getElementById("ulContainer-link");
 var top_links = ulContainer.getElementsByClassName("top-links");
 
@@ -49,6 +27,12 @@ for(var i=0; i<top_links.length; i++)
     });
 }
 
+const menuButton = document.getElementById('menu-button');
+// console.log(menuButton.getAttribute('aria-expanded'))
+menuButton.addEventListener("onclick", function() {
+  const menuAriaValue = menuButton.getAttribute('aria-expanded');
+  console.log(menuAriaValue);
+})
 
 var canvas = document.getElementById('canvas-sl1');
   var context = canvas.getContext('2d');
@@ -73,25 +57,26 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }*/
 
+const signupModal = document.getElementById('signupPopupContainer')
+const loginModal = document.getElementById('loginPopupContainer')
+
 document.getElementById('joinNow').onclick = function() {
-  document.getElementById('SignupPopupContainer').style.display = 'block';
+  signupModal.style.display = 'block';
   document.getElementsByTagName('body')[0].style.overflow = 'hidden';
 };
 
 document.getElementById('Login').onclick = function() {
-  document.getElementById('LoginPopupContainer').style.display = 'block';
+  loginModal.style.display = 'block';
   document.getElementsByTagName('body')[0].style.overflow = 'hidden';
 };
 
-var signupModal = document.getElementById('SignupPopupContainer')
-var loginModal = document.getElementById('LoginPopupContainer')
 
 window.onclick = function(event) {
-  if (event.target == signupModal) {
+  if (event.target === signupModal) {
     signupModal.style.display = "none";
     document.getElementsByTagName('body')[0].removeAttribute('style');
   }
-  else if(event.target == loginModal) {
+  else if(event.target === loginModal) {
     loginModal.style.display = "none";
     document.getElementsByTagName('body')[0].removeAttribute('style');
   }
@@ -99,26 +84,54 @@ window.onclick = function(event) {
 
 // *********************** THEME MODE *************************
 // code for toggling style button switching dark and light mode
+// MAYBE MISBEHAVE
 
 // here storing boolean to variable that whether these class is present onload if not then it false will store and if present then true will store
 var lgtCondition = document.querySelector("#light-toggle").classList.contains("active-light-mode");
 // dark mode button will always contain "default-active-dark-mode" onload
 var drkCondition = document.querySelector("#dark-toggle").classList.contains("default-active-dark-mode");
 
-// by default none because this button is active by default
-// document.getElementById('dark-toggle').style.display = "none";
+const htmlCusDrk = document.getElementsByTagName('html')[0];
+const bodyCusDrk = document.getElementsByTagName('body')[0];
+const link1 = document.getElementById('home');
+const link2 = document.getElementById('blog');
+const navLinksContainer = document.getElementById('nav-linksContainer');
+const colpsdbg = document.getElementById('collapsibleNavbar');
+const h1SectLft = document.getElementById('h1-sl1');
+const blinkingCursor = document.getElementsByClassName('blinking-cursor')[0];
+const pSectLft = document.getElementById('p-sl1');
+const spanSectRgt = document.getElementById('span-sr1');
+const h5SectRgt = document.getElementById('h5-sr1');
+const pSectRgt = document.getElementById('p-sr1');
+const joinNoWBtn = document.getElementById('joinNow');
+const Loginbtn = document.getElementById('Login');
+// const sPopupContainer = document.getElementById('signupPopupContainer');
+// const lPopupContainer = document.getElementById('loginPopupContainer');
+// const sPopupbdy = document.getElementById('signupPopupBody');
+// const lPopupbdy = document.getElementById('loginPopupBody');
+const btcIndexFooter = document.getElementById('btcIndex-footer');
+const ftLink1 = document.getElementById('cpyrgt-sect');
+const ftLink2 = document.getElementById('career');
+const ftLink3 = document.getElementById('contact');
+const ftLink4 = document.getElementById('about-us');
+const ftLink5 = document.getElementById('privacy-policy');
+const originText = document.getElementById('IN-origin');
+const facebookIconLink = document.getElementById('ftsocial-icon-fb');
+const googleIconLink = document.getElementById('ftsocial-icon-g');
+const linkedIconLink = document.getElementById('ftsocial-icon-in');
 
 // adding event listener that on mouserover execute inside codes
-document.getElementById('toggle-theme-mode').addEventListener("mouseover", function() {
+const darkSwitch = document.getElementById('toggle-theme-mode');
+darkSwitch.addEventListener("mouseover", function() {
   // when we hover mouse on dark light toggle button below three lines will applied
   document.getElementById('toggle-theme-mode').style.position = "fixed";
   var bottomAlignment = document.getElementById('toggle-theme-mode').style.bottom = "70px";
-  var rightAlignment = document.getElementById('toggle-theme-mode').style.right = "80px";
+  var rightAlignment = document.getElementById('toggle-theme-mode').style.right = "70px";
   // then storing values in fixed variable which cannot be modified. Storing value as const so that these variable should not be modified by mistake
   const btnContainer = document.getElementById('toggle-theme-mode');
   const btns = btnContainer.getElementsByClassName('switch');
   // condition checking
-  if(bottomAlignment == "70px" && rightAlignment == "80px") {
+  if(bottomAlignment === "70px" && rightAlignment === "70px") {
     // if above condition is true then execute below cdes
     if(drkCondition) {
       // if this condition is true then execute below codes
@@ -126,88 +139,57 @@ document.getElementById('toggle-theme-mode').addEventListener("mouseover", funct
       document.getElementById('dark-toggle').onclick = function() {
         // removing class
         btns[0].className = btns[0].className.replace(/\b active-light-mode\b/g, "");
-        // adding class
-        const clsName1 = "default-active-dark-mode"
-        btns[1].className = btns[1].className + " " + clsName1
+        // adding class to dark-mode button
+        const clsName1 = "default-active-dark-mode";
+        btns[1].className = btns[1].className + " " + clsName1;
 
         //*************************************
         // in developing mode not final ******* IMPORTANT NOTE
         //*************************************
-        // appling light mode
+        // applying light mode
         // for html and body tag
-        const htmlCusDrk = document.getElementsByTagName('html')[0];
-        const bodyCusDrk = document.getElementsByTagName('body')[0];
         htmlCusDrk.removeAttribute("class");
-        bodyCusDrk.removeAttribute("class")
+        bodyCusDrk.removeAttribute("class");
         // for nav links
-        const link1 = document.getElementById('home');
-        const link2 = document.getElementById('blog');
         link1.className = link1.className.replace(/\b tplnk-light-mode\b/g, "");
         link2.className = link2.className.replace(/\b tplnk-light-mode\b/g, "");
         // for navbar after scrolled
-        const navLinksContainer = document.getElementById('nav-linksContainer');
         navLinksContainer.className = navLinksContainer.className.replace(/\b ns-light-mode\b/g, ""); 
-        // document.getElementById('nav-linksContainer').className = document.getElementById('nav-linksContainer').className.replace(/\b ns-light-mode\b/g, "");
 
         // for nav link after scrolled
         link1.className = link1.className.replace(/\b tplnkscrd-light-mode\b/g, "");
         link2.className = link2.className.replace(/\b tplnkscrd-light-mode\b/g, "");
 
         // for navbar on smaller screen
-        const colpsdbg = document.getElementById('collapsibleNavbar');
         colpsdbg.className = colpsdbg.className.replace(/\b colpsdbg-light-mode\b/g, "");
 
         // for section 1 sub-section on left
-        const h1SectLft = document.getElementById('h1-sl1');
         h1SectLft.className = h1SectLft.className.replace(/\b h1-sect1-lft-light-mode\b/g, "");
-        const blinkingCursor = document.getElementsByClassName('blinking-cursor')[0];
         blinkingCursor.className = blinkingCursor.className.replace(/\bblinkcur-light-mode\b/g, "");
-        const pSectLft = document.getElementById('p-sl1');
         pSectLft.className = pSectLft.className.replace(/\b p-sect1-lft-light-mode\b/g, "");
 
         // for section 1 sub-section on right
-        const spanSectRgt = document.getElementById('span-sr1');
         spanSectRgt.removeAttribute('class');
-        // spanSectRgt.className = spanSectRgt.className.replace(/\b span-sect1-rgt-light-mode\b/g, "");
-        const h5SectRgt = document.getElementById('h5-sr1');
         h5SectRgt.removeAttribute('class');
-        // h5SectRgt.className = h5SectRgt.className.replace(/\bh5-sect1-rgt-light-mode\b/g, "");
-        const pSectRgt = document.getElementById('p-sr1');
         pSectRgt.removeAttribute('class');
-        // pSectRgt.className = pSectRgt.className.replace(/\bp-sect1-rgt-light-mode'\b/g, "");
 
         // for join-login buttons
-        const joinNoWBtn = document.getElementById('joinNow');
         joinNoWBtn.className = joinNoWBtn.className.replace(/\b joinnow-btn-light-mode\b/g, "");
-        const Loginbtn = document.getElementById('Login');
         Loginbtn.className = Loginbtn.className.replace(/\blogin-btn-light-mode\b/g, "");
 
-        // optimize below code ********* NOTE
         // for footer tag and footer link
-        const btcIndexFooter = document.getElementById('btcIndex-footer');
         btcIndexFooter.className = btcIndexFooter.className.replace(/\b footer-light-mode\b/g, "");
-        const ftLink1 = document.getElementById('cpyrgt-sect');
         ftLink1.className = ftLink1.className.replace(/\b cpyrgt-light-mode\b/g, "");
-        const ftLink2 = document.getElementById('career');
         ftLink2.className = ftLink2.className.replace(/\b ftlink-light-mode\b/g, "");
-        const ftLink3 = document.getElementById('contact');
         ftLink3.className = ftLink3.className.replace(/\b ftlink-light-mode\b/g, "");
-        const ftLink4 = document.getElementById('about-us');
         ftLink4.className = ftLink4.className.replace(/\b ftlink-light-mode\b/g, "");
-        const ftLink5 = document.getElementById('privacy-policy');
         ftLink5.className = ftLink5.className.replace(/\b ftlink-light-mode\b/g, "");
-        const originText = document.getElementById('IN-origin');
         originText.className = originText.className.replace(/\b cntry-IN-light-mode\b/g, "");
-        // below 3 three codes not working checkout
-        // bug social-icon-theme-toggle error code-sitt01
-        const facebookIconLink = document.getElementById('ftsocial-icon-fb');
-        facebookIconLink.className = facebookIconLink.className.replace(/\b ftscoial-icon\b/g, "");
-        const googleIconLink = document.getElementById('ftsocial-icon-g');
-        googleIconLink.className = googleIconLink.className.replace(/\b ftscoial-icon\b/g, "");
-        const linkedIconLink = document.getElementById('ftsocial-icon-in');
-        linkedIconLink.className = linkedIconLink.className.replace(/\b ftscoial-icon\b/g, "");
+        facebookIconLink.className = facebookIconLink.className.replace(/\b ftsocial-icon\b/g, "");
+        googleIconLink.className = googleIconLink.className.replace(/\b ftsocial-icon\b/g, "");
+        linkedIconLink.className = linkedIconLink.className.replace(/\b ftsocial-icon\b/g, "");
 
-        // changing display style
+        // changing display style of buttons on click
         document.getElementById('dark-toggle').style.display = "none";
         document.getElementById('light-toggle').style.display = "block";
       }
@@ -216,57 +198,54 @@ document.getElementById('toggle-theme-mode').addEventListener("mouseover", funct
     if(!lgtCondition) {
       // if this condition is true then execute below codes
       // here a function is created which will work when user will click on light mode toggle button
-      document.getElementById('light-toggle').onclick = function() {
+      const lightSwitch = document.getElementById('light-toggle');
+      lightSwitch.onclick = function() {
         // removing class
         btns[1].className = btns[1].className.replace(/\b default-active-dark-mode\b/g, "");
-        // adding class
-        const clsName0 = "active-light-mode"
-        btns[0].className = btns[0].className + " " + clsName0
+        // adding class to light-mode button
+        const clsName0 = "active-light-mode";
+        btns[0].className = btns[0].className + " " + clsName0;
         
         //*************************************
         // in developing mode not final ******* IMPORTANT NOTE
         //*************************************
         // appling light mode
-        const htmlCus = document.getElementsByTagName('html')[0];
-        const bodyCus = document.getElementsByTagName('body')[0];
-        htmlCus.classList.toggle('light-mode');
-        bodyCus.classList.toggle('light-mode');
+        htmlCusDrk.classList.toggle('light-mode');
+        bodyCusDrk.classList.toggle('light-mode');
         
         // code needs to be written in correct way this is wriiten for testing correct it in final form 
-        document.getElementById('home').classList.toggle('tplnk-light-mode');
-        document.getElementById('blog').classList.toggle('tplnk-light-mode');
+        link1.classList.toggle('tplnk-light-mode');
+        link2.classList.toggle('tplnk-light-mode');
         
-        document.getElementById('nav-linksContainer').classList.toggle('ns-light-mode');
-        document.getElementById('home').classList.toggle('tplnkscrd-light-mode');
-        document.getElementById('blog').classList.toggle('tplnkscrd-light-mode');
+        navLinksContainer.classList.toggle('ns-light-mode');
+        link1.classList.toggle('tplnkscrd-light-mode');
+        link2.classList.toggle('tplnkscrd-light-mode');
 
-        document.getElementById('collapsibleNavbar').classList.toggle('colpsdbg-light-mode');
+        colpsdbg.classList.toggle('colpsdbg-light-mode');
 
-        document.getElementById('h1-sl1').classList.toggle('h1-sect1-lft-light-mode');
-        document.getElementsByClassName('blinking-cursor')[0].classList.toggle('blinkcur-light-mode');
-        document.getElementById('p-sl1').classList.toggle('p-sect1-lft-light-mode');
+        h1SectLft.classList.toggle('h1-sect1-lft-light-mode');
+        blinkingCursor.classList.toggle('blinkcur-light-mode');
+        pSectLft.classList.toggle('p-sect1-lft-light-mode');
 
-        document.getElementById('span-sr1').classList.toggle('span-sect1-rgt-light-mode');
-        document.getElementById('h5-sr1').classList.toggle('h5-sect1-rgt-light-mode');
-        document.getElementById('p-sr1').classList.toggle('p-sect1-rgt-light-mode');
+        spanSectRgt.classList.toggle('span-sect1-rgt-light-mode');
+        h5SectRgt.classList.toggle('h5-sect1-rgt-light-mode');
+        pSectRgt.classList.toggle('p-sect1-rgt-light-mode');
 
-        // these buttons need changes in style and improvement in light mode
-        document.getElementById('joinNow').classList.toggle('joinnow-btn-light-mode');
-        // document.getElementById('joinNow').classList.toggle('joinnow-btn-light-mode-hover');
-        document.getElementById('Login').classList.toggle('login-btn-light-mode');
+        joinNoWBtn.classList.toggle('joinnow-btn-light-mode');
+        Loginbtn.classList.toggle('login-btn-light-mode');
 
-        document.getElementById('btcIndex-footer').classList.toggle('footer-light-mode');
-        document.getElementById('cpyrgt-sect').classList.toggle('cpyrgt-light-mode');
-        document.getElementById('career').classList.toggle('ftlink-light-mode');
-        document.getElementById('contact').classList.toggle('ftlink-light-mode');
-        document.getElementById('about-us').classList.toggle('ftlink-light-mode');
-        document.getElementById('privacy-policy').classList.toggle('ftlink-light-mode');
-        document.getElementById('IN-origin').classList.toggle('cntry-IN-light-mode');
-        document.getElementById('ftsocial-icon-fb').classList.toggle('ftsocial-icon');
-        document.getElementById('ftsocial-icon-g').classList.toggle('ftsocial-icon');
-        document.getElementById('ftsocial-icon-in').classList.toggle('ftsocial-icon');
+        btcIndexFooter.classList.toggle('footer-light-mode');
+        ftLink1.classList.toggle('cpyrgt-light-mode');
+        ftLink2.classList.toggle('ftlink-light-mode');
+        ftLink3.classList.toggle('ftlink-light-mode');
+        ftLink4.classList.toggle('ftlink-light-mode');
+        ftLink5.classList.toggle('ftlink-light-mode');
+        originText.classList.toggle('cntry-IN-light-mode');
+        facebookIconLink.classList.toggle('ftsocial-icon');
+        googleIconLink.classList.toggle('ftsocial-icon');
+        linkedIconLink.classList.toggle('ftsocial-icon');
         
-        // changing display style
+        // changing display style of buttons
         document.getElementById('dark-toggle').style.display = "block";
         document.getElementById('light-toggle').style.display = "none";
       }
@@ -275,12 +254,16 @@ document.getElementById('toggle-theme-mode').addEventListener("mouseover", funct
 })
 
 // setting interval so that after that interval dark light toggle button goes back to its initial position
-setInterval(function() { 
-  // changing syle so that dark light toggle button return to its original position as they were before hover
-  document.getElementById('toggle-theme-mode').style.position = "fixed";
-  bottomAlignment = document.getElementById('toggle-theme-mode').style.bottom = "30px";
-  rightAlignment = document.getElementById('toggle-theme-mode').style.right = "30px"; 
-}, 12000);
+// for touch devices workes different
+const ruTouchOrNot = window.matchMedia("(pointer: fine)").matches;
+if(ruTouchOrNot) {
+  setInterval(function() { 
+    // changing syle so that dark light toggle button return to its original position as they were before hover
+    document.getElementById('toggle-theme-mode').style.position = "fixed";
+    bottomAlignment = document.getElementById('toggle-theme-mode').style.bottom = "30px";
+    rightAlignment = document.getElementById('toggle-theme-mode').style.right = "30px"; 
+  }, 12000);
+}
 
 
 
