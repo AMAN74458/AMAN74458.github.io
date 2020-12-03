@@ -1,3 +1,10 @@
+window.addEventListener("load", () => {
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+    console.log("Service Worker registered");
+  }
+});
+
 var ulContainer = document.getElementById("ulContainer-link");
 var top_links = ulContainer.getElementsByClassName("top-links");
 
