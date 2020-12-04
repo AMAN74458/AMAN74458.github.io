@@ -1,11 +1,10 @@
 <!-- Commented area should not be removed until final ver came out. This is a demo ver. --> 
 <!-- please read comments carefully -->
-<!-- DARK MODE NOT READY FOR TOUCH DEVICES -->
 <!-- copyrights BTC all rights reserved -->
-<!-- developer AMAN KUMAR v-0.3.2 -->
+<!-- developer AMAN KUMAR v-0.3.3 -->
 
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -13,190 +12,189 @@
     <title>Bob The Coder</title>
     <link rel="icon" type="image/png" sizes="32x32" href="img/BTC_favicon_2.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/BTC_favicon_2.png">
-    
-
-    <!-- Jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- Google Fonts-->
-    <link href='https://fonts.googleapis.com/css?family=Patua+One&display=swap' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/index.css" type="text/css">
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
 </head>
-
 <body id="switch-theme">
-
+    <!-- head section -->
     <header class="header">
+        <!-- navbar -->
         <nav class="navbar navbar-expand-lg fixed-top navbar-custom dark-navbar-scrolled-mode" id="nav-linksContainer">
             <!-- LOGO -->
-            <a class="navbar-brand brand-logo" href="">
+            <a class="navbar-brand brand-logo" href="https://bobthecoder.com">
                 <svg id="compny-logo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 467.4 269.79"><defs><style>.cls-1{fill:#333646;}.cls-2{fill:#1FCC8E;}.cls-3{fill:#535e5d;}</style></defs><!--<rect class="cls-1" width="467.4" height="269.79" rx="12"/>--><path class="cls-2" d="M361.25,270.06l-28.43,14.06a5.74,5.74,0,0,0,0,10.3l28.38,14a5.64,5.64,0,0,1,3.14,5.05v65.42a18.25,18.25,0,0,1-18.26,18.26H225.61a5.74,5.74,0,0,1-5.74-5.74V187a5.74,5.74,0,0,1,5.74-5.74H345.8a18.56,18.56,0,0,1,18.55,18.55v65.22A5.56,5.56,0,0,1,361.25,270.06Z" transform="translate(-192.63 -154.4)"/><rect class="cls-3" x="207.05" y="26.9" width="198.13" height="34.66" rx="5.77"/><rect class="cls-3" x="408.39" y="288.26" width="180.72" height="36.23" rx="5.62" transform="translate(-0.26 650.72) rotate(-90)"/><rect class="cls-2" x="480.63" y="216.02" width="151.83" height="36.94" rx="5.42" transform="translate(920.46 314.57) rotate(180)"/><rect class="cls-2" x="480.63" y="362.02" width="151.83" height="34.72" rx="5.7" transform="translate(920.46 604.36) rotate(180)"/><circle class="cls-3" cx="306.12" cy="80.09" r="7.66"/><circle class="cls-3" cx="306.12" cy="224.98" r="7.66"/></svg>
             </a>
-
+            <!-- LOGO -->
             <!-- Toggler/collapsible Button for nav -->
-            <button class="navbar-toggler toggler-btn" id="menu-button" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <button class="navbar-toggler toggler-btn" id="menu-button" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-label="menu">
                     <div class="button-inner-wrapper">
                         <span class="icon menu-icon"></span>
                     </div>
             </button>
-
+            <!-- Toggler/collapsible Button for nav -->
             <!-- top-nav-links -->
             <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
                 <ul class="nav top-main-links" id="ulContainer-link">
                     <li class="nav-item li-top-menu" id="menu0">
                         <span id="active-link-icon"></span>
-                        <a href="#" class="nav-link top-links active-link" id="home">Home</a>
+                        <a href="https://bobthecoder.com" class="nav-link top-links active-link" id="home">Home</a>
                     </li>
                     <li class="nav-item li-top-menu" id="menu1">
-                        <a href="#" class="nav-link top-links" id="blog">Blog</a>
+                        <a href="pages/blog.html" class="nav-link top-links" id="blog">Blog</a>
                     </li>
                 </ul>
             </div>
+            <!-- top-nav-links -->
         </nav>
+        <!-- navbar -->
     </header>
+    <!-- head section -->
 
-    <!-- Scroll Icon -->
-    <!--<div id="scroll-icon-sect" class="scroll-icon">
-        <div class="mouse"></div>
-        <p class="text-center mouse-scroll-down">Scroll Down</p>
-    </div>-->
+    <!-- main part -->
+    <main class="main" id="mainContainer">
+        <!-- dark-light mode button -->
+        <div class="theme-toggle-btn" id="toggle-theme-mode">
+            <!-- light mode button -->
+            <button class="light-theme switch" id="light-toggle" aria-label="light mode button">
+                <svg id="light-mode-icon" viewBox="-32 0 511 512" xmlns="http://www.w3.org/2000/svg">
+                    <path id="light-mode-icon" d="m223.644531 85.332031c-94.101562 0-170.664062 76.566407-170.664062 170.667969s76.5625 170.667969 170.664062 170.667969c94.101563 0 170.667969-76.566407 170.667969-170.667969s-76.566406-170.667969-170.667969-170.667969zm0 309.335938c-76.457031 0-138.664062-62.210938-138.664062-138.667969s62.207031-138.667969 138.664062-138.667969c76.460938 0 138.667969 62.210938 138.667969 138.667969s-62.207031 138.667969-138.667969 138.667969zm0 0"/>
+                    <path id="light-mode-icon" d="m207.644531 16v37.332031c0 8.832031 7.167969 16 16 16s16-7.167969 16-16v-37.332031c0-8.832031-7.167969-16-16-16s-16 7.167969-16 16zm0 0"/>
+                    <path id="light-mode-icon" d="m23.730469 124.394531c-7.851563-4.03125-17.492188-.808593-21.503907 7.039063-3.988281 7.894531-.832031 17.515625 7.0625 21.503906l31.613282 16c2.328125 1.195312 4.800781 1.730469 7.210937 1.730469 5.847657 0 11.480469-3.203125 14.292969-8.769531 3.992188-7.894532.832031-17.515626-7.058594-21.503907zm0 0"/>
+                    <path id="light-mode-icon" d="m40.925781 343.0625-31.617187 16c-7.894532 3.988281-11.050782 13.609375-7.0625 21.503906 2.816406 5.566406 8.449218 8.765625 14.296875 8.765625 2.429687 0 4.882812-.53125 7.210937-1.726562l31.613282-16c7.894531-3.988281 11.050781-13.609375 7.0625-21.503907-4.011719-7.871093-13.632813-11.09375-21.503907-7.039062zm0 0"/>
+                    <path id="light-mode-icon" d="m223.644531 442.667969c-8.832031 0-16 7.167969-16 16v37.332031c0 8.832031 7.167969 16 16 16s16-7.167969 16-16v-37.332031c0-8.832031-7.167969-16-16-16zm0 0"/>
+                    <path id="light-mode-icon" d="m438.003906 359.0625-31.617187-16c-7.871094-4.03125-17.492188-.832031-21.503907 7.039062-3.988281 7.894532-.832031 17.515626 7.0625 21.503907l31.613282 16c2.304687 1.195312 4.78125 1.726562 7.210937 1.726562 5.847657 0 11.476563-3.199219 14.292969-8.765625 3.992188-7.894531.8125-17.515625-7.058594-21.503906zm0 0"/>
+                    <path id="light-mode-icon" d="m423.558594 124.394531-31.613282 16c-7.894531 3.988281-11.050781 13.609375-7.0625 21.503907 2.816407 5.566406 8.449219 8.769531 14.292969 8.769531 2.433594 0 4.886719-.535157 7.210938-1.730469l31.617187-16c7.890625-3.988281 11.050782-13.609375 7.058594-21.503906-3.988281-7.871094-13.609375-11.09375-21.503906-7.039063zm0 0"/>
+                </svg>
+            </button>
+            <!-- light mode button -->
+            <!-- dark mode button -->
+            <button class="dark-theme switch default-active-dark-mode" id="dark-toggle" aria-label="dark mode button">
+                <svg id="dark-mode-icon" enable-background="new 0 0 512.001 512.001" viewBox="0 0 512.001 512.001" xmlns="http://www.w3.org/2000/svg"><g>
+                    <path id="dark-mode-icon" d="m406 151.001c8.284 0 15-6.716 15-15 0-24.813 20.187-45 45-45 8.284 0 15-6.716 15-15s-6.716-15-15-15c-24.393 0-45-21.065-45-46 0-8.284-6.716-15-15-15s-15 6.716-15 15c0 24.935-20.607 46-45 46-8.284 0-15 6.716-15 15s6.716 15 15 15c24.813 0 45 20.187 45 45 0 8.284 6.716 15 15 15zm-15.253-75.15c5.784-4.41 10.865-9.568 15.253-15.479 4.387 5.91 9.468 11.069 15.253 15.479-5.781 4.312-10.922 9.437-15.253 15.203-4.331-5.767-9.472-10.891-15.253-15.203z"/>
+                    <path id="dark-mode-icon" d="m301 106.001c0-8.284-6.716-15-15-15s-15 6.716-15 15c0 41.355-33.645 75-75 75-8.284 0-15 6.716-15 15s6.716 15 15 15c41.355 0 75 33.645 75 75 0 8.284 6.716 15 15 15s15-6.716 15-15c0-41.355 33.645-75 75-75 8.284 0 15-6.716 15-15s-6.716-15-15-15c-41.355 0-75-33.645-75-75zm-15 125.972c-8.871-14.722-21.25-27.101-35.971-35.972 14.722-8.871 27.1-21.25 35.971-35.972 8.871 14.722 21.25 27.101 35.971 35.972-14.721 8.871-27.1 21.249-35.971 35.972z"/>
+                    <path id="dark-mode-icon" d="m256 512.001c128.638 0 238.83-96.522 255.862-221.298.946-6.93-3.022-13.593-9.566-16.063-6.542-2.469-13.924-.09-17.793 5.737-33.016 49.73-91.835 80.624-153.503 80.624-99.252 0-180-80.748-180-180 0-61.668 30.893-120.487 80.624-153.503 5.826-3.868 8.207-11.25 5.737-17.793-2.469-6.543-9.131-10.511-16.063-9.566-124.939 17.055-221.298 127.397-221.298 255.862 0 140.959 115.05 256 256 256zm-87.774-466.347c-29.922 37.658-47.226 85.737-47.226 135.347 0 115.794 94.206 210 210 210 49.61 0 97.688-17.304 135.347-47.226-34.932 81.747-117.091 138.226-210.347 138.226-124.617 0-226-101.383-226-226 0-93.256 56.479-175.415 138.226-210.347z"/></g>
+                </svg>
+            </button>
+            <!-- dark mode button -->
+        </div>
+        <!-- dark-light mode button -->
 
-    <!-- dark-light mode button -->
-    <div class="theme-toggle-btn" id="toggle-theme-mode">
-        <button class="light-theme switch" id="light-toggle">
-            <svg id="light-mode-icon" viewBox="-32 0 511 512" xmlns="http://www.w3.org/2000/svg">
-                <path id="light-mode-icon" d="m223.644531 85.332031c-94.101562 0-170.664062 76.566407-170.664062 170.667969s76.5625 170.667969 170.664062 170.667969c94.101563 0 170.667969-76.566407 170.667969-170.667969s-76.566406-170.667969-170.667969-170.667969zm0 309.335938c-76.457031 0-138.664062-62.210938-138.664062-138.667969s62.207031-138.667969 138.664062-138.667969c76.460938 0 138.667969 62.210938 138.667969 138.667969s-62.207031 138.667969-138.667969 138.667969zm0 0"/>
-                <path id="light-mode-icon" d="m207.644531 16v37.332031c0 8.832031 7.167969 16 16 16s16-7.167969 16-16v-37.332031c0-8.832031-7.167969-16-16-16s-16 7.167969-16 16zm0 0"/>
-                <path id="light-mode-icon" d="m23.730469 124.394531c-7.851563-4.03125-17.492188-.808593-21.503907 7.039063-3.988281 7.894531-.832031 17.515625 7.0625 21.503906l31.613282 16c2.328125 1.195312 4.800781 1.730469 7.210937 1.730469 5.847657 0 11.480469-3.203125 14.292969-8.769531 3.992188-7.894532.832031-17.515626-7.058594-21.503907zm0 0"/>
-                <path id="light-mode-icon" d="m40.925781 343.0625-31.617187 16c-7.894532 3.988281-11.050782 13.609375-7.0625 21.503906 2.816406 5.566406 8.449218 8.765625 14.296875 8.765625 2.429687 0 4.882812-.53125 7.210937-1.726562l31.613282-16c7.894531-3.988281 11.050781-13.609375 7.0625-21.503907-4.011719-7.871093-13.632813-11.09375-21.503907-7.039062zm0 0"/>
-                <path id="light-mode-icon" d="m223.644531 442.667969c-8.832031 0-16 7.167969-16 16v37.332031c0 8.832031 7.167969 16 16 16s16-7.167969 16-16v-37.332031c0-8.832031-7.167969-16-16-16zm0 0"/>
-                <path id="light-mode-icon" d="m438.003906 359.0625-31.617187-16c-7.871094-4.03125-17.492188-.832031-21.503907 7.039062-3.988281 7.894532-.832031 17.515626 7.0625 21.503907l31.613282 16c2.304687 1.195312 4.78125 1.726562 7.210937 1.726562 5.847657 0 11.476563-3.199219 14.292969-8.765625 3.992188-7.894531.8125-17.515625-7.058594-21.503906zm0 0"/>
-                <path id="light-mode-icon" d="m423.558594 124.394531-31.613282 16c-7.894531 3.988281-11.050781 13.609375-7.0625 21.503907 2.816407 5.566406 8.449219 8.769531 14.292969 8.769531 2.433594 0 4.886719-.535157 7.210938-1.730469l31.617187-16c7.890625-3.988281 11.050782-13.609375 7.058594-21.503906-3.988281-7.871094-13.609375-11.09375-21.503906-7.039063zm0 0"/>
-            </svg>
-        </button>
-        <button class="dark-theme switch default-active-dark-mode" id="dark-toggle">
-            <svg id="dark-mode-icon" enable-background="new 0 0 512.001 512.001" viewBox="0 0 512.001 512.001" xmlns="http://www.w3.org/2000/svg"><g>
-                <path id="dark-mode-icon" d="m406 151.001c8.284 0 15-6.716 15-15 0-24.813 20.187-45 45-45 8.284 0 15-6.716 15-15s-6.716-15-15-15c-24.393 0-45-21.065-45-46 0-8.284-6.716-15-15-15s-15 6.716-15 15c0 24.935-20.607 46-45 46-8.284 0-15 6.716-15 15s6.716 15 15 15c24.813 0 45 20.187 45 45 0 8.284 6.716 15 15 15zm-15.253-75.15c5.784-4.41 10.865-9.568 15.253-15.479 4.387 5.91 9.468 11.069 15.253 15.479-5.781 4.312-10.922 9.437-15.253 15.203-4.331-5.767-9.472-10.891-15.253-15.203z"/>
-                <path id="dark-mode-icon" d="m301 106.001c0-8.284-6.716-15-15-15s-15 6.716-15 15c0 41.355-33.645 75-75 75-8.284 0-15 6.716-15 15s6.716 15 15 15c41.355 0 75 33.645 75 75 0 8.284 6.716 15 15 15s15-6.716 15-15c0-41.355 33.645-75 75-75 8.284 0 15-6.716 15-15s-6.716-15-15-15c-41.355 0-75-33.645-75-75zm-15 125.972c-8.871-14.722-21.25-27.101-35.971-35.972 14.722-8.871 27.1-21.25 35.971-35.972 8.871 14.722 21.25 27.101 35.971 35.972-14.721 8.871-27.1 21.249-35.971 35.972z"/>
-                <path id="dark-mode-icon" d="m256 512.001c128.638 0 238.83-96.522 255.862-221.298.946-6.93-3.022-13.593-9.566-16.063-6.542-2.469-13.924-.09-17.793 5.737-33.016 49.73-91.835 80.624-153.503 80.624-99.252 0-180-80.748-180-180 0-61.668 30.893-120.487 80.624-153.503 5.826-3.868 8.207-11.25 5.737-17.793-2.469-6.543-9.131-10.511-16.063-9.566-124.939 17.055-221.298 127.397-221.298 255.862 0 140.959 115.05 256 256 256zm-87.774-466.347c-29.922 37.658-47.226 85.737-47.226 135.347 0 115.794 94.206 210 210 210 49.61 0 97.688-17.304 135.347-47.226-34.932 81.747-117.091 138.226-210.347 138.226-124.617 0-226-101.383-226-226 0-93.256 56.479-175.415 138.226-210.347z"/></g>
-            </svg>
-        </button>
-    </div>
-
-    <section class="section-1">
-        <!-- background animation -->
-        <!-- <div class="wrking-bg container-fluid animateContainer"> -->
-            <!-- <span id="a1">{}</span> -->
-            <!-- <span id="a2">+=</span> -->
-            <!-- <span id="a3">-=</span> -->
-            <!-- <span id="a4">++</span> -->
-            <!-- <span id="a5">--</span> -->
-            <!-- <span id="a6">==</span> -->
-            <!-- <span id="a7">!=</span> -->
-            <!-- <span id="a8">^</span> -->
-            <!-- <span id="a9">&&</span> -->
-            <!-- <span id="a10">||</span> -->
-            <!-- <span id="a11">:</span> -->
-            <!-- <span id="a12">?</span> -->
-            <!-- <span id="a13">/*</span> -->
-            <!-- <span id="a14">*/</span> -->
-            <!-- <span id="a15">//</span> -->
-        <!-- </div> -->
-            
-        <div class="container-fluid" id="sect-1">
-            <div class="row">
-                <div class="sect-1-sub-left-content col-md-6 col-lg-6">
-                    <h1 class="banner-head" id="h1-sl1">Bob The Coder<span class="blinking-cursor">_</span></h1>
-                    <canvas id="canvas-sl1"></canvas>
-                    <p class="w-50 banner-sub-stm" id="p-sl1">Code, Compete & Earn<span id="arrow-ico">&#8594;</span></p>
-                </div>
-                <div class="sect-1-sub-right-content col-md-6 col-lg-6">
-                    <span id="span-sr1">- Overview</span>
-                    <h5 id="h5-sr1">Challenge yourself, can you beat your opponents.</h5>
-                    <p id="p-sr1">Are you getting bored or you want to try something new? Well, you are at right place. First time ever code, compete and earn. Test yourself, how fast are you?</p>
-                    <div class="login-join-btn">
-                        <button type="button" class="btn mr-sm-4 mr-lg-4 join-now-btn" id="joinNow">Join Now</button>
-                        <button type="button" class="btn login-btn" id="Login">Login</button>
+        <!-- section 1 -->
+        <section class="section-1">      
+            <div class="container-fluid" id="sect-1">
+                <div class="row">
+                    <!-- sub section on left -->
+                    <div class="sect-1-sub-left-content col-md-6 col-lg-6">
+                        <h1 class="banner-head" id="h1-sl1">Bob The Coder<span class="blinking-cursor">_</span></h1>
+                        <canvas id="canvas-sl1"></canvas>
+                        <p class="w-50 banner-sub-stm" id="p-sl1">Code, Compete & Earn<span id="arrow-ico">&#8594;</span></p>
                     </div>
+                    <!-- sub section on left -->
+                    <!-- sub section on right -->
+                    <div class="sect-1-sub-right-content col-md-6 col-lg-6">
+                        <span id="span-sr1">- Overview</span>
+                        <h5 id="h5-sr1">Challenge yourself, can you beat your opponents.</h5>
+                        <p id="p-sr1">Are you getting bored or you want to try something new? Well, you are at right place. First time ever code, compete and earn. Test yourself, how fast are you?</p>
+                        <div class="login-join-btn">
+                            <button type="button" class="btn mr-sm-4 mr-lg-4 join-now-btn" id="joinNow">Join Now</button>
+                            <button type="button" class="btn login-btn" id="Login">Login</button>
+                        </div>
+                    </div>
+                    <!-- sub section on right -->
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <!-- section 1 -->
 
-    <!-- Sign up popup body -->
-    <div class="popup-container" id="signupPopupContainer">
-        <!-- <a href="#close" class="close-icon" id="close-signup-popup">X</a> -->
-        <!--<div class="close-icon"></div>-->
-        <div class="popup-body" id="signupPopupBody">
-            <!-- <div id="dlogo">
-                <svg id="Layer_1 compny-logo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 467.4 269.79"><defs><style>.cls-1{fill:#333646;}.cls-2{fill:#53bfa1;}.cls-3{fill:#535e5d;}</style></defs><rect class="cls-1" width="467.4" height="269.79" rx="12"/>--><!--<path class="cls-2" d="M361.25,270.06l-28.43,14.06a5.74,5.74,0,0,0,0,10.3l28.38,14a5.64,5.64,0,0,1,3.14,5.05v65.42a18.25,18.25,0,0,1-18.26,18.26H225.61a5.74,5.74,0,0,1-5.74-5.74V187a5.74,5.74,0,0,1,5.74-5.74H345.8a18.56,18.56,0,0,1,18.55,18.55v65.22A5.56,5.56,0,0,1,361.25,270.06Z" transform="translate(-192.63 -154.4)"/><rect class="cls-3" x="207.05" y="26.9" width="198.13" height="34.66" rx="5.77"/><rect class="cls-3" x="408.39" y="288.26" width="180.72" height="36.23" rx="5.62" transform="translate(-0.26 650.72) rotate(-90)"/><rect class="cls-2" x="480.63" y="216.02" width="151.83" height="36.94" rx="5.42" transform="translate(920.46 314.57) rotate(180)"/><rect class="cls-2" x="480.63" y="362.02" width="151.83" height="34.72" rx="5.7" transform="translate(920.46 604.36) rotate(180)"/><circle class="cls-3" cx="306.12" cy="80.09" r="7.66"/><circle class="cls-3" cx="306.12" cy="224.98" r="7.66"/></svg>-->
-            <!-- </div> -->
-            <div class="popup-buttons-signup">
-                <div class="text-center sgithub-container">
-                    <a href="#" class="btn popup-btns github-btn">
-                        <svg class="github-icon-btn" id="github-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 291.32 291.32" style="enable-background:new 0 0 291.32 291.32;" xml:space="preserve">
-                            <g>
-                                <path d="M145.66,0C65.219,0,0,65.219,0,145.66c0,80.45,65.219,145.66,145.66,145.66s145.66-65.21,145.66-145.66C291.319,65.219,226.1,0,145.66,0z M186.462,256.625c-0.838-11.398-1.775-25.518-1.83-31.235c-0.364-4.388-0.838-15.549-11.434-22.677c42.068-3.523,62.087-26.774,63.526-57.499c1.202-17.497-5.754-32.883-18.107-45.3c0.628-13.282-0.401-29.023-1.256-35.941c-9.486-2.731-31.608,8.949-37.79,13.947c-13.037-5.062-44.945-6.837-64.336,0c-13.747-9.668-29.396-15.64-37.926-13.974c-7.875,17.452-2.813,33.948-1.275,35.914c-10.142,9.268-24.289,20.675-20.447,44.572c6.163,35.04,30.816,53.94,70.508,58.564c-8.466,1.73-9.896,8.048-10.606,10.788c-26.656,10.997-34.275-6.791-37.644-11.425c-11.188-13.847-21.23-9.832-21.849-9.614c-0.601,0.218-1.056,1.092-0.992,1.511c0.564,2.986,6.655,6.018,6.955,6.263c8.257,6.154,11.316,17.27,13.2,20.438c11.844,19.473,39.374,11.398,39.638,11.562c0.018,1.702-0.191,16.032-0.355,27.184C64.245,245.992,27.311,200.2,27.311,145.66c0-65.365,52.984-118.348,118.348-118.348S264.008,80.295,264.008,145.66C264.008,196.668,231.69,239.992,186.462,256.625z"/>
-                            </g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
-                        </svg>
-                        Sign up with Github
-                    </a>
+        <!-- Signup popup container -->
+        <div class="popup-container" id="signupPopupContainer">
+            <!-- popup body -->
+            <div class="popup-body" id="signupPopupBody">
+                <!-- button container -->
+                <div class="text-center popup-buttons-signup">
+                    <!-- github button -->
+                    <div class="sgithub-container mb-3 pb-2 mb-sm-3 pb-sm-2 mb-md-3 pb-md-2 mb-lg-3 pb-lg-2">
+                        <a href="#" class="btn popup-btns github-btn" id="githubBtnSignup">
+                            <svg class="github-icon-btn" id="github-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 291.32 291.32" style="enable-background:new 0 0 291.32 291.32;" xml:space="preserve">
+                                <g>
+                                    <path d="M145.66,0C65.219,0,0,65.219,0,145.66c0,80.45,65.219,145.66,145.66,145.66s145.66-65.21,145.66-145.66C291.319,65.219,226.1,0,145.66,0z M186.462,256.625c-0.838-11.398-1.775-25.518-1.83-31.235c-0.364-4.388-0.838-15.549-11.434-22.677c42.068-3.523,62.087-26.774,63.526-57.499c1.202-17.497-5.754-32.883-18.107-45.3c0.628-13.282-0.401-29.023-1.256-35.941c-9.486-2.731-31.608,8.949-37.79,13.947c-13.037-5.062-44.945-6.837-64.336,0c-13.747-9.668-29.396-15.64-37.926-13.974c-7.875,17.452-2.813,33.948-1.275,35.914c-10.142,9.268-24.289,20.675-20.447,44.572c6.163,35.04,30.816,53.94,70.508,58.564c-8.466,1.73-9.896,8.048-10.606,10.788c-26.656,10.997-34.275-6.791-37.644-11.425c-11.188-13.847-21.23-9.832-21.849-9.614c-0.601,0.218-1.056,1.092-0.992,1.511c0.564,2.986,6.655,6.018,6.955,6.263c8.257,6.154,11.316,17.27,13.2,20.438c11.844,19.473,39.374,11.398,39.638,11.562c0.018,1.702-0.191,16.032-0.355,27.184C64.245,245.992,27.311,200.2,27.311,145.66c0-65.365,52.984-118.348,118.348-118.348S264.008,80.295,264.008,145.66C264.008,196.668,231.69,239.992,186.462,256.625z"/>
+                                </g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                            </svg>
+                            Sign up with Github
+                        </a>
+                    </div>
+                    <!-- github button -->
+                    <!-- google button -->
+                    <div class="sgoogle-container mb-2 pb-2 mb-sm-2 pb-sm-2 mb-md-2 pb-md-2 mb-lg-2 pb-lg-2">
+                        <a href="#" class="btn popup-btns google-btn" id="googleBtnSignup">
+                            <svg class="google-icon-btn" id="google-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve">
+                                <g>
+                                    <g id="goog">
+                                        <path d="M286.875,229.5v63.75h150.45c-15.3,89.25-86.7,153-175.95,153c-104.55,0-191.25-86.7-191.25-191.25s86.7-191.25,191.25-191.25c53.55,0,99.45,22.95,132.6,58.65l45.9-45.9c-45.9-45.9-107.1-76.5-178.5-76.5c-140.25,0-255,114.75-255,255s114.75,255,255,255s242.25-114.75,242.25-255v-25.5H286.875z"/>
+                                    </g>
+                                </g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+                            </svg>
+                            Sign up with Google
+                        </a>
+                    </div>
+                    <!-- google button -->
+                    <p class="text-center Sp0" style="font-weight: 100; color: #e2e2e2;">- or -</p>
+                    <!-- btcEmail button -->
+                    <div class="sbtc-container mt-2 pt-2 mt-sm-2 pt-sm-2 mt-md-2 pt-md-2 mt-lg-2 pt-lg-2">
+                        <a href="pages/signup.html" target="_blank" class="btn popup-btns email-btn" id="btcBtnSignup">Sign up with Email</a>
+                    </div>
+                    <!-- btcEmail button -->
                 </div>
-                <div class="text-center sgoogle-container">
-                    <a href="#" class="btn popup-btns google-btn">
-                        <svg class="google-icon-btn" id="google-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve">
-                            <g>
-                                <g id="goog">
-                                    <path d="M286.875,229.5v63.75h150.45c-15.3,89.25-86.7,153-175.95,153c-104.55,0-191.25-86.7-191.25-191.25s86.7-191.25,191.25-191.25c53.55,0,99.45,22.95,132.6,58.65l45.9-45.9c-45.9-45.9-107.1-76.5-178.5-76.5c-140.25,0-255,114.75-255,255s114.75,255,255,255s242.25-114.75,242.25-255v-25.5H286.875z"/>
-                                </g>
-                            </g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
-                        </svg>
-                        Sign up with Google
-                    </a>
-                </div>
-                <p class="text-center" style="font-weight: 100; color: #e2e2e2;">- or -</p>
-                <div class="text-center sbtc-container">
-                    <!--<button type="button" class="btn popup-btns email-btn">Sign up with Email</button>-->
-                    <a href="pages/signup.html" target="_blank" class="btn popup-btns email-btn">Sign up with Email</a>
-                </div>
+                <!-- button container -->
+                <p class="text-center p1 pt-2 pt-sm-2 pt-md-2 pt-lg-2">By signing up, you agree to BTC <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
             </div>
-            <p class="text-center p1 mt-4">By signing up, you agree to BTC <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
+            <!-- popup body -->
         </div>
-    </div>
+        <!-- signup popup container -->
 
-    <!-- Login popup body -->
-    <div class="popup-container" id="loginPopupContainer">
-        <!-- <a href="#close" class="close-icon" id="close-login-popup">X</a> -->
-        <!--<div class="close-icon"></div>-->
-        <div class="popup-body" id="loginPopupBody">
-            <div class="popup-buttons-signup">
-                <div class="text-center sgithub-container">
-                    <a href="#" class="btn popup-btns github-btn">
-                        <svg class="github-icon-btn" id="github-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 291.32 291.32" style="enable-background:new 0 0 291.32 291.32;" xml:space="preserve"><g><path d="M145.66,0C65.219,0,0,65.219,0,145.66c0,80.45,65.219,145.66,145.66,145.66s145.66-65.21,145.66-145.66C291.319,65.219,226.1,0,145.66,0z M186.462,256.625c-0.838-11.398-1.775-25.518-1.83-31.235c-0.364-4.388-0.838-15.549-11.434-22.677c42.068-3.523,62.087-26.774,63.526-57.499c1.202-17.497-5.754-32.883-18.107-45.3c0.628-13.282-0.401-29.023-1.256-35.941c-9.486-2.731-31.608,8.949-37.79,13.947c-13.037-5.062-44.945-6.837-64.336,0c-13.747-9.668-29.396-15.64-37.926-13.974c-7.875,17.452-2.813,33.948-1.275,35.914c-10.142,9.268-24.289,20.675-20.447,44.572c6.163,35.04,30.816,53.94,70.508,58.564c-8.466,1.73-9.896,8.048-10.606,10.788c-26.656,10.997-34.275-6.791-37.644-11.425c-11.188-13.847-21.23-9.832-21.849-9.614c-0.601,0.218-1.056,1.092-0.992,1.511c0.564,2.986,6.655,6.018,6.955,6.263c8.257,6.154,11.316,17.27,13.2,20.438c11.844,19.473,39.374,11.398,39.638,11.562c0.018,1.702-0.191,16.032-0.355,27.184C64.245,245.992,27.311,200.2,27.311,145.66c0-65.365,52.984-118.348,118.348-118.348S264.008,80.295,264.008,145.66C264.008,196.668,231.69,239.992,186.462,256.625z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-                        Login with Github
-                    </a>
+        <!-- Login popup container -->
+        <div class="popup-container" id="loginPopupContainer">
+            <!-- popup body -->
+            <div class="popup-body" id="loginPopupBody">
+                <!-- button conyainer -->
+                <div class="popup-buttons-signup">
+                    <!-- github button -->
+                    <div class="text-center sgithub-container mb-3 pb-2 mb-sm-3 pb-sm-2 mb-md-3 pb-md-2 mb-lg-3 pb-lg-2">
+                        <a href="#" class="btn popup-btns github-btn">
+                            <svg class="github-icon-btn" id="github-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 291.32 291.32" style="enable-background:new 0 0 291.32 291.32;" xml:space="preserve"><g><path d="M145.66,0C65.219,0,0,65.219,0,145.66c0,80.45,65.219,145.66,145.66,145.66s145.66-65.21,145.66-145.66C291.319,65.219,226.1,0,145.66,0z M186.462,256.625c-0.838-11.398-1.775-25.518-1.83-31.235c-0.364-4.388-0.838-15.549-11.434-22.677c42.068-3.523,62.087-26.774,63.526-57.499c1.202-17.497-5.754-32.883-18.107-45.3c0.628-13.282-0.401-29.023-1.256-35.941c-9.486-2.731-31.608,8.949-37.79,13.947c-13.037-5.062-44.945-6.837-64.336,0c-13.747-9.668-29.396-15.64-37.926-13.974c-7.875,17.452-2.813,33.948-1.275,35.914c-10.142,9.268-24.289,20.675-20.447,44.572c6.163,35.04,30.816,53.94,70.508,58.564c-8.466,1.73-9.896,8.048-10.606,10.788c-26.656,10.997-34.275-6.791-37.644-11.425c-11.188-13.847-21.23-9.832-21.849-9.614c-0.601,0.218-1.056,1.092-0.992,1.511c0.564,2.986,6.655,6.018,6.955,6.263c8.257,6.154,11.316,17.27,13.2,20.438c11.844,19.473,39.374,11.398,39.638,11.562c0.018,1.702-0.191,16.032-0.355,27.184C64.245,245.992,27.311,200.2,27.311,145.66c0-65.365,52.984-118.348,118.348-118.348S264.008,80.295,264.008,145.66C264.008,196.668,231.69,239.992,186.462,256.625z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                            Login with Github
+                        </a>
+                    </div>
+                    <!-- github button -->
+                    <!-- google button -->
+                    <div class="text-center sgoogle-container mb-2 pb-2 mb-sm-2 pb-sm-2 mb-md-2 pb-md-2 mb-lg-2 pb-lg-2">
+                        <a href="#" class="btn popup-btns google-btn">
+                            <svg class="google-icon-btn" id="google-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve"><g><g id="goog"><path d="M286.875,229.5v63.75h150.45c-15.3,89.25-86.7,153-175.95,153c-104.55,0-191.25-86.7-191.25-191.25s86.7-191.25,191.25-191.25c53.55,0,99.45,22.95,132.6,58.65l45.9-45.9c-45.9-45.9-107.1-76.5-178.5-76.5c-140.25,0-255,114.75-255,255s114.75,255,255,255s242.25-114.75,242.25-255v-25.5H286.875z"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                            Login with Google
+                        </a>
+                    </div>
+                    <!-- google button -->
+                    <p class="text-center" style="font-weight: 100; color: #e2e2e2;">- or -</p>
+                    <!-- btcEmail button -->
+                    <div class="text-center sbtc-container mt-2 pt-2 mt-sm-2 pt-sm-2 mt-md-2 pt-md-2 mt-lg-2 pt-lg-2">
+                        <a href="pages/login.html" target="_blank" class="btn popup-btns email-btn">Login with Email</a>
+                    </div>
+                    <!-- btcEmail button -->
                 </div>
-                <div class="text-center sgoogle-container">
-                    <a href="#" class="btn popup-btns google-btn">
-                        <svg class="google-icon-btn" id="google-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve"><g><g id="goog"><path d="M286.875,229.5v63.75h150.45c-15.3,89.25-86.7,153-175.95,153c-104.55,0-191.25-86.7-191.25-191.25s86.7-191.25,191.25-191.25c53.55,0,99.45,22.95,132.6,58.65l45.9-45.9c-45.9-45.9-107.1-76.5-178.5-76.5c-140.25,0-255,114.75-255,255s114.75,255,255,255s242.25-114.75,242.25-255v-25.5H286.875z"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-                        Login with Google
-                    </a>
-                </div>
-                <p class="text-center" style="font-weight: 100; color: #e2e2e2;">- or -</p>
-                <div class="text-center sbtc-container">
-                    <a href="pages/login.html" target="_blank" class="btn popup-btns email-btn">Login with Email</a>
-                </div>
+                <!-- button container -->
+                <p class="text-center p1 pt-2 pt-sm-2 pt-md-2 pt-lg-2">By signing up, you agree to BTC <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
             </div>
-            <p class="text-center p1 mt-4">By signing up, you agree to BTC <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
+            <!-- popup body -->
         </div>
-    </div>
+        <!-- login popup container -->
+    </main>
+    <!-- main part -->
     
     <!-- Footer -->
     <footer class="page-footer font-small pt-4" id="btcIndex-footer">
@@ -206,49 +204,53 @@
                 <div class="col-md-4 col-lg-6 footer-copyright text-lg-left">
                     <span class="copyright-sect" id="cpyrgt-sect">&copy; 2020 Copyright BobTheCoder</span>
                 </div>
-
+                <!-- Copyright -->
+                <!-- foot links -->
                 <div class="bottom-link col-sm-12 col-md-8 col-lg-6 text-right">
-                    <ul class="list-unstyled"><li><a href="#!" class="bottom-foot-link pl-lg-4" id="career">Career</a></li></ul>
+                    <ul class="list-unstyled"><li><a href="pages/career.html" class="bottom-foot-link pl-lg-4" id="career">Career</a></li></ul>
                     <ul class="list-unstyled"><li><a href="pages/contact.html" class="bottom-foot-link pl-4" id="contact">Contact</a></li></ul>
-                    <ul class="list-unstyled"><li><a href="#!" class="bottom-foot-link pl-4" id="about-us">About us</a></li></ul>
-                    <ul class="list-unstyled"><li><a href="#!" class="bottom-foot-link pl-lg-4" id="privacy-policy">Privacy Policy</a></li></ul>
+                    <ul class="list-unstyled"><li><a href="pages/aboutus.html" class="bottom-foot-link pl-4" id="about-us">About us</a></li></ul>
+                    <ul class="list-unstyled"><li><a href="pages/privacypolicy.html" class="bottom-foot-link pl-4 pl-lg-4" id="privacy-policy">Privacy Policy</a></li></ul>
                 </div>
+                <!-- foot links -->
             </div>
-            
+            <!-- origin detail optional -->
             <div class="col-sm-12 col-md-12 col-lg-12 text-center made-with-love mt-lg-3">
                 <h5 class="made-in-india" id="IN-origin">Made with <span style="color: rgb(161, 58, 58);">&hearts;</span> in INDIA.</h5>
             </div>
-            
+            <!-- origin detail optional -->
             <!-- Social buttons -->
             <div class="social-link w-100 text-center mt-3 mb-2">
                 <ul class="list-unstyled list-inline">
                     <li class="list-inline-item">
-                        <a href="#" class="btn-floating btn-fb mx-1" id="ftsocial-icon-fb">
-                            <i class="fab fa-facebook-f"> </i>
+                        <a href="https://facebook.com" class="btn-floating btn-fb mx-1" id="ftsocial-icon-fb" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="#" class="btn-floating btn-tw mx-1" id="ftsocial-icon-g">
-                            <i class="fab fa-twitter"> </i>
+                        <a href="https://twitter.com" class="btn-floating btn-tw mx-1" id="ftsocial-icon-g" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="#" class="btn-floating btn-li mx-1" id="ftsocial-icon-in">
-                            <i class="fab fa-linkedin-in"> </i>
+                        <a href="https://linkedin.com" class="btn-floating btn-li mx-1" id="ftsocial-icon-in" aria-label="Linkedin">
+                            <i class="fab fa-linkedin-in"></i>
                         </a>
                     </li>
                 </ul>
             </div>
+            <!-- social buttons -->
         </div>
     </footer>
+    <!-- footer -->
 
+    <!-- Jquery -->
     <script src="https://kit.fontawesome.com/85989e8249.js" crossorigin="anonymous"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/global.js"></script>
     <script src="./js/landing-fn.js"></script>
-    <script src="./jquery/main-fn.js"></script>
 </body>
-
 </html>
