@@ -1,5 +1,5 @@
 /* copyrights BTC all rights reserved */
-/* developer AMAN KUMAR v-0.3.2 */
+/* developer AMAN KUMAR v-0.3.3 */
 
 
 html, body {
@@ -24,10 +24,10 @@ html, body {
         bottom: 30px;
         /* right: 100px; */
         right: 30px;
-        animation: goOut ease 3.5s infinite;
-        animation-delay: 2s;
+        animation: bounce ease 2.5s infinite;
+        animation-delay: 1s;
         transition: all 0.3s ease;
-        z-index: 2000;
+        z-index: 2001;
     }
 
     .theme-toggle-btn:hover {
@@ -40,7 +40,7 @@ html, body {
         position: fixed;
         bottom: 70px;
         right: 70px;
-        z-index: 20000;
+        z-index: 2001;
     }
 }
 /* buttons */
@@ -79,7 +79,7 @@ html, body {
     fill: #ffffff;
 }
 
-@keyframes goOut {
+@keyframes bounce {
     0% {
         transform: translateY(5px);
         opacity: 0.1;
@@ -111,7 +111,8 @@ html, body {
 .navbar-custom {
     border-top: 5px solid #1FCC8E;
     padding: 40px 10%;
-    animation: onLoadFadeIn ease-in 2s;
+    z-index: 2002;
+    animation: onLoadFadeIn ease-in 1s;
 }
 
 .brand-logo {
@@ -266,22 +267,36 @@ html, body {
 /* ENDING NAVBAR TOGGLE BUTTON STYLING ON SMALL SCREEN */
 
 /* NAVBAR LINK STYLING ON SMALL SCREEN */
+/* .collapsing is default way of collapsing nav-links in bootstrap which we overide */
 .collapsing {
     -webkit-transition: none;
     transition: none;
     display: none;
 }
-  
+
 .navbar-collapse.collapse.show {
     position: fixed;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     background-color: #000000fd;
-    /*background-color: rgba(31, 204, 141, 0.699);*/
+    animation: rightToLeft cubic-bezier(0.075, 0.62, 0.012, 1) 0.8s;
+}
+
+@keyframes rightToLeft {
+    from {
+        position: fixed;
+        top: 50%;
+        margin-left: 100%;
+    }
+    to {
+        position: fixed;
+        top: 50%;
+        margin-left: 0%;
+    }
 }
 
 .navbar-collapse.collapse.show #active-link-icon {
@@ -315,10 +330,6 @@ html, body {
 .navbar-collapse.collapse.show .top-main-links li {
     margin: 20px;
 }
-
-.navbar-collapse.collapse.show .custom-control {
-    padding-left: 0;
-}
 /* ENDING NAVBAR LINK STYLING ON SMALL SCREEN */
 
 /* SECTION 1 STYLING */
@@ -326,196 +337,8 @@ html, body {
     min-height: 60vh;
     margin-top: 140px;
     padding: 80px 5%;
-    animation: onLoadFadeIn ease-in 2s;
+    animation: onLoadFadeIn ease-in 1s;
 }
-
-/* working background style */
-/*.wrking-bg {
-    position: relative;
-    height: auto;
-}
-
-#a1 {
-    color: rgb(240, 12, 12);
-    position: absolute;
-    top: 40px;
-    left: 0;
-    font-size: 2em;
-    animation: fadeInOut 2s linear infinite;
-}
-
-#a2 {
-    color: rgb(39, 138, 82);
-    position: absolute;
-    top: 0;
-    left: 60px
-    font-size: 0.9em;
-    animation: fadeInOut 1.8s linear infinite;
-}
-
-#a3 {
-    color: rgb(149, 202, 42);
-    position: absolute;
-    top: 170px;
-    left: 75px;
-    font-size: 1.5em;
-    animation: fadeInOut 1.3s ease-out infinite;
-}
-
-#a4 {
-    color: rgb(238, 238, 16);
-    position: absolute;
-    top: 100px;
-    left: 235px;
-    font-size: 0.5em;
-    animation: fadeInOut 1.8s linear infinite;
-}
-
-#a5 {
-    color: rgb(243, 93, 66);
-    position: absolute;
-    top: 240px;
-    left: 295px;
-    font-size: 2em;
-    animation: fadeInOut 2s linear infinite;
-}
-
-#a6 {
-    color: rgb(9, 129, 129);
-    position: absolute;
-    top: 400px;
-    left: 205px;
-    font-size: 0.8em;
-    animation: fadeInOut 1.5s linear infinite;
-}
-
-#a7 {
-    color: rgb(199, 171, 199);
-    position: absolute;
-    top: 450px;
-    left: -60px;
-    font-size: 0.5em;
-    animation: fadeInOut 1.5s ease-out infinite;
-}
-
-#a8 {
-    color: rgb(54, 221, 204);
-    position: absolute;
-    top: 90px;
-    left: 580px;
-    font-size: 2em;
-    animation: fadeInOut 1.4s ease-in infinite;
-}
-
-#a9 {
-    color: rgb(243, 215, 164);
-    position: absolute;
-    top: 0;
-    left: 700px;
-    font-size: 2em;
-    animation: fadeInOut 1.8s ease-in infinite;
-}
-
-#a10 {
-    color: rgb(228, 226, 226);
-    font-size: 0.9em;
-    position: absolute;
-    top: 420px;
-    left: 900px;
-    animation: fadeInOut 1.3s ease-in infinite;
-}
-
-#a11 {
-    color: #55bd97;
-    position: absolute;
-    top: 390px;
-    left: 1000px;
-    animation: fadeInOut 1.1s ease-in infinite;
-}
-
-#a12 {
-    color: rgb(240, 12, 12);
-    position: absolute;
-    top: 180px;
-    left: 850px;
-    font-size: 1.5em;
-    animation: fadeInOut 1.6s ease-in infinite;
-}
-
-#a13 {
-    color: rgb(240, 12, 12);
-    position: absolute;
-    top: 280px;
-    left: 700px;
-    font-size: 0.8em;
-    animation: fadeInOut 1.6s ease-in infinite;
-}
-
-#a14 {
-    color: rgb(238, 238, 16);
-    position: absolute;
-    top: 50px;
-    left: 1020px;
-    animation: fadeInOut 1.2s ease infinite;
-}
-
-#a15 {
-    color: rgb(238, 238, 16);
-    position: absolute;
-    top: 320px;
-    left: 280px;
-    font-size: 1.8em;
-    animation: fadeInOut 1.4s ease-in infinite;
-}*/
-
-/*@keyframes fadeInOut {
-    0% {
-        transform: scale(0);
-    }
-
-    20% {
-        transform: scale(0.2);
-    }
-
-    40% {
-        transform: scale(0.4);
-    }
-
-    60% {
-        transform: scale(0.6);
-    }
-
-    80% {
-        transform: scale(0.8);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-    0% {
-        opacity: 0;
-    }
-
-    20% {
-        opacity: 0.2;
-    }
-
-    40% {
-        opacity: 0.4;
-    }
-
-    60% {
-        opacity: 0.6;
-    }
-
-    80% {
-        opacity: 0.8;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}*/
 
 /* SUB-SECTION 1 LEFT ON STYLING */
 .sect-1-sub-left-content h1 {
@@ -529,7 +352,7 @@ html, body {
     cursor: default;
     color: #e7e7e7;
     animation: blink 1.4s steps(2, start) infinite;
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 
 @keyframes blink {
@@ -630,6 +453,11 @@ html, body {
     transform: scale(0.9);
     transition: transform 0.5s ease-out;
 }
+
+.join-now-btn:focus, .login-btn:focus {
+    transform: scale(0.9);
+}
+
 /* ENDING LOGIN-JOIN BUTTON STYLIING */
 /* ENDING SUB-SECTION 1 ON RIGHT STYLING */
 
@@ -642,11 +470,9 @@ html, body {
     backdrop-filter: blur(2px);
     height: 100%;
     width: 100%;
-    overflow: auto;
-    z-index: 20000;
+    z-index: 2001;
     display: none;
-    animation: scaleUp ease-in 0.2s;
-    overflow: hidden!important;
+    animation: scaleUp ease 0.2s;
 }
 
 /* when join-now or login button is clicked then this animation will be applied to popup container*/
@@ -669,14 +495,9 @@ html, body {
     transform: translate(-50%,-50%);
     height: auto;
     box-shadow: 15px 18px #11111193;
-    z-index: 50000;
 }
 
 .popup-buttons-signup {
-    padding: 2%;
-}
-
-.sgithub-container, .sgoogle-container {
     margin: 20px 0;
 }
 
@@ -685,7 +506,7 @@ html, body {
     color: #ffffff;
     font-weight: 500;
     border-radius: 50px;
-    /* box-shadow: none!important; */
+    box-shadow: none!important;
 }
 
 .github-icon-btn {
@@ -703,10 +524,6 @@ html, body {
     left: -70px;
     fill: #ffffff;
 }
-
-/*svg#github-icon path {
-    fill: #ffffff;
-}*/
 
 .github-btn {
     background-color: #141414;
@@ -726,7 +543,7 @@ html, body {
     0 1px 1px rgba(0, 0, 0, 0.06),
     0 2px 1.9px rgba(0, 0, 0, 0.072),
     0 4px 3px rgba(0, 0, 0, 0.086),
-    0 10px 8px rgba(0, 0, 0, 0.12);
+    0 10px 8px rgba(0, 0, 0, 0.12)!important;
 }
 
 .google-btn {
@@ -747,7 +564,7 @@ html, body {
     0 1px 1px rgba(0, 0, 0, 0.06),
     0 2px 1.9px rgba(0, 0, 0, 0.072),
     0 4px 3px rgba(0, 0, 0, 0.086),
-    0 10px 8px rgba(0, 0, 0, 0.12);
+    0 10px 8px rgba(0, 0, 0, 0.12)!important;
 }
 
 .email-btn {
@@ -768,7 +585,7 @@ html, body {
     0 1px 1px rgba(0, 0, 0, 0.06),
     0 2px 1.9px rgba(0, 0, 0, 0.072),
     0 4px 3px rgba(0, 0, 0, 0.086),
-    0 10px 8px rgba(0, 0, 0, 0.12);
+    0 10px 8px rgba(0, 0, 0, 0.12)!important;
 }
 
 .popup-btns:active {
@@ -777,9 +594,16 @@ html, body {
     transition: transform 0.5s ease;
 }
 
+.popup-btns:focus {
+    transform: scale(0.9);
+}
+
+.popup-body p {
+    margin-bottom: 0;
+}
+
 .p1 {
     font-weight: 300;
-    margin-bottom: 0%;
     color: #e2e2e2;
 }
 
@@ -795,7 +619,7 @@ footer {
     padding: 110px 10% 2% 10%;
     /* background-color: #252734; */
     background-color: #181818;
-    animation: onLoadFadeIn ease-in 2s;
+    animation: onLoadFadeIn ease-in 1s;
     transition: background-color 1s ease;
 }
 
@@ -996,11 +820,7 @@ footer a.ftsocial-icon {
         padding-left: 15px;
         padding-right: 15px;
     }
-
-    /*footer {
-        min-height: 40vh!important;
-    } */
-
+    
     .footer-copyright {
         text-align: center;
     }
@@ -1034,20 +854,15 @@ footer a.ftsocial-icon {
         left: -35px;
         fill: #ffffff;
     }
-
-    .close-icon {
-        position: relative;
-        top: 15px;
-        left: 91%;
-        font-size: 2em;
-        color: rgb(160, 30, 30);
-        text-decoration: none!important;
-    }
 }
 
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 425px) {
     .join-now-btn {
         margin-right: 24px;
+    }
+
+    .popup-buttons-signup {
+        padding: 0%;
     }
 
     .popup-body {
