@@ -1,11 +1,11 @@
 // navbar scrolling effect-- color chng
-$(function () {
-    $(document).scroll(function () {
-        var $nav = $(".navbar");
-        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-        //console.log($(this).scrollTop());
-    });
-});
+// $(function () {
+//     $(document).scroll(function () {
+//         var $nav = $(".navbar");
+//         $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+//         //console.log($(this).scrollTop());
+//     });
+// });
 
 // $("#customSwitches").change(function(){
 //     if($(this).prop("checked") == true){
