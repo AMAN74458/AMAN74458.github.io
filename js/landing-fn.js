@@ -1,10 +1,26 @@
-window.addEventListener("load", () => {
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("service-worker.js");
-    console.log("Service Worker registered");
-  }
-});
+// ServiceWorker is a progressive technology. Ignore unsupported browsers
+if('serviceWorker' in navigator) {
+  console.log('CLIENT: service worker registration in progress.');
+  navigator.serviceWorker.register('/service-worker.js').then(function() {
+    console.log('CLIENT: service worker registration complete.');
+}, function() {
+    console.log('CLIENT: service worker registration failure.');
+  });
+} else {
+  console.log('CLIENT: service worker is not supported.');
+}
 
+// for navbar on small screen 
+const menuButton = document.getElementById('menu-button');
+menuButton.addEventListener("click", function() {
+  document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+  const ariaValue = document.getElementById('menu-button').getAttribute('aria-expanded');
+  if(ariaValue === "true") {
+    document.getElementsByTagName('body')[0].removeAttribute('style');
+  }
+})
+
+// giving style to active link in navbar
 var ulContainer = document.getElementById("ulContainer-link");
 var top_links = ulContainer.getElementsByClassName("top-links");
 
@@ -34,13 +50,7 @@ for(var i=0; i<top_links.length; i++)
     });
 }
 
-const menuButton = document.getElementById('menu-button');
-// console.log(menuButton.getAttribute('aria-expanded'))
-menuButton.addEventListener("onclick", function() {
-  const menuAriaValue = menuButton.getAttribute('aria-expanded');
-  console.log(menuAriaValue);
-})
-
+// canvas 
 var canvas = document.getElementById('canvas-sl1');
   var context = canvas.getContext('2d');
   var centerX = canvas.width / 2;
@@ -52,31 +62,19 @@ var canvas = document.getElementById('canvas-sl1');
   context.fillStyle = '#1FCC8E';
   context.fill();
 
-/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-/*var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("scroll-sect").style.top = "0";
-  } else {
-    document.getElementById("scroll-sect").style.top = "-50px";
-  }
-  prevScrollpos = currentScrollPos;
-}*/
-
+// for popup on index page
 const signupModal = document.getElementById('signupPopupContainer')
 const loginModal = document.getElementById('loginPopupContainer')
 
-document.getElementById('joinNow').onclick = function() {
+document.getElementById('joinNow').addEventListener("click", function() {
   signupModal.style.display = 'block';
   document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-};
+})
 
-document.getElementById('Login').onclick = function() {
+document.getElementById('Login').addEventListener("click", function() {
   loginModal.style.display = 'block';
   document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-};
-
+})
 
 window.onclick = function(event) {
   if (event.target === signupModal) {
@@ -88,6 +86,7 @@ window.onclick = function(event) {
     document.getElementsByTagName('body')[0].removeAttribute('style');
   }
 }
+
 
 // *********************** THEME MODE *************************
 // code for toggling style button switching dark and light mode
@@ -112,10 +111,6 @@ const h5SectRgt = document.getElementById('h5-sr1');
 const pSectRgt = document.getElementById('p-sr1');
 const joinNoWBtn = document.getElementById('joinNow');
 const Loginbtn = document.getElementById('Login');
-// const sPopupContainer = document.getElementById('signupPopupContainer');
-// const lPopupContainer = document.getElementById('loginPopupContainer');
-// const sPopupbdy = document.getElementById('signupPopupBody');
-// const lPopupbdy = document.getElementById('loginPopupBody');
 const btcIndexFooter = document.getElementById('btcIndex-footer');
 const ftLink1 = document.getElementById('cpyrgt-sect');
 const ftLink2 = document.getElementById('career');
@@ -129,7 +124,7 @@ const linkedIconLink = document.getElementById('ftsocial-icon-in');
 
 // adding event listener that on mouserover execute inside codes
 const darkSwitch = document.getElementById('toggle-theme-mode');
-darkSwitch.addEventListener("mouseover", function() {
+darkSwitch.addEventListener("mouseenter", function() {
   // when we hover mouse on dark light toggle button below three lines will applied
   document.getElementById('toggle-theme-mode').style.position = "fixed";
   var bottomAlignment = document.getElementById('toggle-theme-mode').style.bottom = "70px";
@@ -260,24 +255,29 @@ darkSwitch.addEventListener("mouseover", function() {
   }
 })
 
-// setting interval so that after that interval dark light toggle button goes back to its initial position
-// for touch devices workes different
-const ruTouchOrNot = window.matchMedia("(pointer: fine)").matches;
-if(ruTouchOrNot) {
-  setInterval(function() { 
-    // changing syle so that dark light toggle button return to its original position as they were before hover
-    document.getElementById('toggle-theme-mode').style.position = "fixed";
-    bottomAlignment = document.getElementById('toggle-theme-mode').style.bottom = "30px";
-    rightAlignment = document.getElementById('toggle-theme-mode').style.right = "30px"; 
-  }, 12000);
+// for darkLight Switch
+function setTiming() {
+  const ruTouchOrNot = window.matchMedia("(pointer: fine)").matches;
+  // setting initial running time to zero
+  let timeRunning = 0;
+  // if device is touch then this will not work
+  // and if device is not touch then this will work
+  if(ruTouchOrNot) {
+    // setting interval to perform specific task
+    var timer = setInterval(function() { 
+      // incrementing running time by 1 second
+      timeRunning += 1;
+      // if running time is equal to 1 sec then stop setInterval
+      if(timeRunning === 1) {
+        // stoping setInterval named timer
+        clearInterval(timer);
+      }
+      // changing syle so that dark light toggle button return to its original position as they were before hover
+      document.getElementById('toggle-theme-mode').style.position = "fixed";
+      bottomAlignment = document.getElementById('toggle-theme-mode').style.bottom = "30px";
+      rightAlignment = document.getElementById('toggle-theme-mode').style.right = "30px";
+    }, 8000);
+  }
 }
-
-
-
-
-
-
-
-
-
-
+// when user remove mouse from switch then setTiming function will be called
+darkSwitch.addEventListener("mouseleave", setTiming())
