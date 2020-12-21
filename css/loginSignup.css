@@ -1,0 +1,660 @@
+/* copyrights BTC all rights reserved */
+/* developer AMAN KUMAR v-0.2.5 */
+
+html, body {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(90deg, #212121 50%, #ffffff00 50%);
+    min-height: 90vh;
+}
+
+/* NAVBAR STYLING */
+.navbar-custom {
+    padding: 40px 5% 5px 5%;
+}
+
+.brand-logo {
+    width: 120px;
+}
+
+.brand-logo svg {
+    width: 80px;
+}
+
+.li-top-menu {
+    font-size: 1em;
+    font-weight: 400;
+    border: 1px solid #181818;
+    border-radius: 3px;
+    transition: all 0.5s ease;
+}
+
+.li-top-menu:hover {
+    background-color: #181818;
+    border: 1px solid #181818;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.li-top-menu #login {
+    color: #181818;
+    padding: .4rem 1rem;
+    transition: all 0.5s ease;
+}
+
+.li-top-menu #login:hover {
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+
+.section-1 {
+    min-height: 80vh;
+    margin-top: 110px;
+    padding: 18px 0 5px 0;
+    padding-right: calc((50% - 450px) / 2);
+    padding-right: calc((50% - 450px) / 2);
+}
+
+/* STYLING FORM */
+.form-container {
+    float: right;
+    width: 450px;
+    height: 559px;
+    padding: 49px 58px;
+    margin: 20px 0 20px 0;
+    border-radius: 5px;
+    border: 1px solid #f0f0f0;
+    background-color: #ffffff;
+    box-shadow: 0 0 8px 5px #f8f8f8;
+    transition: all 0.5s ease;
+}
+
+/* STYLING head part of form */
+.form-header h1 {
+    font-size: 2em;
+    color: #181818;
+    font-weight: 500;
+}
+
+.form-header p {
+    color: #313131;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+/* STYLING head part of form */
+
+/* STYLING input fields and icon */
+/* OVERIDING BROWSER AUTOFILL STYLES */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    box-shadow: 0 0 0 30px #ffffff inset !important;
+    -webkit-box-shadow: 0 0 0 30px #ffffff inset !important;
+    -webkit-text-fill-color: #000000 !important;
+    animation: none!important;
+    transition: none!important;
+}
+/* ENDING BROWSER AUTOFILL STYLES */
+
+.form-group {
+    height: 46px;
+}
+
+.grp-1 .email-field, .grp-2 .text-field, .grp-3 .pass-field, .grp-4 .confirmpass-field {
+    border: 1px solid #555555;
+    padding-left: 40px;
+}
+
+.text-field::placeholder, .email-field::placeholder, .pass-field::placeholder, .confirmpass-field::placeholder {
+    padding-left: 5px;
+}
+
+.email-icon {
+    position: absolute;
+    top: 306px;
+    margin-left: 12px;
+}
+
+.user-icon {
+    position: absolute;
+    top: 368px;
+    margin-left: 12px;
+}
+
+.lock-icon {
+    position: absolute;
+    top: 430px;
+    margin-left: 12px;
+}
+
+.clock-icon {
+    position: absolute;
+    top: 492px;
+    margin-left: 12px;
+}
+
+.grp-1 .email-icon, .grp-2 .user-icon, .grp-3 .lock-icon, .grp-4 .clock-icon {
+    width: 20px;
+    fill: #555555;
+}
+
+.form-control:focus {
+    color: #000000;
+    background-color: #ffffff;
+    border: 2px solid #555555!important;
+    outline: 0;
+    box-shadow: none;
+}
+
+.email-field:focus + svg.email-icon path, .text-field:focus + svg.user-icon path, .email-field:focus + svg.user-icon path, .pass-field:focus + svg.lock-icon path, .confirmpass-field:focus + svg.clock-icon path {
+    fill: #000000;
+}
+/* STYLING input fields and icon */
+
+.signup-btn {
+    color: #ffffff;
+    width: 120px;
+    border: 2px solid #181818;
+    background-color: #181818;
+    box-shadow: 0 0 6px 2px #ebebeb;
+    transition: all 0.5s ease;
+}
+
+.signup-btn:hover {
+    color: #ffffff;
+}
+
+.signup-btn:focus {
+    box-shadow: none;
+}
+
+.signup-btn:active {
+    transform: scale(0.9);
+    transition: transform 0.5s ease;
+}
+
+/* STYLING form bottom part containg privacy statement */
+.p-bot {
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+.p-bot a {
+    color: #1fcc8e;
+}
+
+.p-bot a:hover {
+    color: #0e9765;
+}
+/* STYLING form bottom part containg privacy statement */
+
+/* FOOTER STYLING */
+footer {
+    width: 100%;
+    padding: 0 3%;
+    /* background-color: #181818; */
+}
+
+.footer-container {
+    padding: 0 1% 1% 1%;
+}
+  
+.footer-flex {
+    width: 100%;
+    margin-left: 0!important;
+    margin-right: 0!important;
+}
+
+.copyright-sect {
+    color: #f4f4f4;
+}
+
+footer ul li {
+    display: inline-block;
+}
+  
+footer a {
+    color: #181818;
+    font-weight: 300;
+}
+  
+footer a:hover {
+    text-decoration: none;
+    color: #1FCC8E;
+    transition: color 0.4s ease;
+}
+
+.footer-copyright span {
+    font-weight: 300;
+}
+/* ENDING FOOTER STYLING */
+
+
+/* ******************************************************************************************************************* */
+/*                                                                                                                     */
+/*                                                   BEHIND FORM DESING                                                */
+/*                                                                                                                     */
+/* ******************************************************************************************************************* */
+
+
+/* STYLING CIRCLE */
+.circle1 {
+    /* clear: both; */
+    position: fixed;
+    top: 580px;
+    left: 750px;
+    /* left: 52%; */
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #1fcc8d07;
+    z-index: -1;
+}
+
+.circle2 {
+    /* clear: both; */
+    position: fixed;
+    top: 180px;
+    left: 1160px;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #1fcc8e0e;
+    z-index: -1;
+}
+
+.circle3 {
+    position: fixed;
+    top: 130px;
+    left: 660px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #1fcc8d44;
+    z-index: -1;
+}
+
+.circle4 {
+    position: fixed;
+    top: 730px;
+    left: 1360px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #1fcc8d8c;
+    z-index: -1;
+}
+
+.circle5 {
+    position: fixed;
+    top: 630px;
+    left: 1360px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #1fcc8d8c;
+    z-index: -1;
+}
+
+.circle6 {
+    position: fixed;
+    top: 300px;
+    left: 820px;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #1fcc8d6b;
+    z-index: -1;
+}
+
+.circle8 {
+    position: fixed;
+    top: 710px;
+    left: 1260px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #1fcc8d8c;
+    z-index: -1;
+}
+/* END STYLING CIRCLE */
+
+
+/* ******************************************************************************************************************* */
+/*                                                                                                                     */
+/*                                 STYLING WHEN ERROR AND SUCCESS DETECTED IN FORM                                     */
+/*                                                                                                                     */
+/* ******************************************************************************************************************* */
+
+
+/* STYLING error message */
+.error {
+    position: absolute;
+    color: #da4343;
+    font-size: 0.7em;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+/* for LOGIN PAGE ERROR */
+#textSpan {
+    top: 332px;
+}
+
+#passSpan {
+    top: 405px;
+}
+/* for LOGIN PAGE ERROR */
+
+/* FOR SIGNUP PAGE ERROR PAGE */
+#sTextSpan {
+    top: 281px;
+    /* top: 141px; */
+}
+
+#usernameSpan {
+    /* top: 203px; */
+    top: 343px;
+}
+
+#sPassSpan {
+    /* top: 265px; */
+    top: 405px;
+}
+
+#confirmPassSpan {
+    /* top: 327px; */
+    top: 467px;
+}
+/* FOR SIGNUP PAGE ERROR PAGE */
+
+.empty-field-animation {
+    animation-name: wobble;    
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    transform-origin: 50% 100%;
+}
+
+@keyframes wobble {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+      }
+      
+      20%, 80% {
+        transform: translate3d(2px, 0, 0);
+      }
+    
+      30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+      }
+    
+      40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+/* STYLING error message */
+
+/* STYLING INPUT FIELD AND ICON ON SUCCESS AND FAILURE */
+.invalid {
+    border: 2px solid #da4343!important;
+}
+
+.invalid + span.error {
+    color: #da4343;
+}
+
+.invalid + span.error + .email-icon, .invalid + span.error + .user-icon, .invalid + span.error + .lock-icon, .invalid + span.error + .clock-icon {
+    fill: #da4343;
+}
+
+.invalid:focus {
+    box-shadow: none!important;
+    border: 2px solid #da4343!important;
+    outline: none;
+}
+
+.valid {
+    border: 2px solid #1fcc8e!important;
+}
+
+.valid + .email-icon, .valid + .user-icon, .valid + .lock-icon, .valid + .clock-icon {
+    fill: #1fcc8e;
+}
+
+.valid:focus {
+    box-shadow: none!important;
+    border: 2px solid #1fcc8e!important;
+    outline: none;
+}
+
+.valid:focus + svg.email-icon path, .valid:focus + svg.user-icon path, .valid:focus + svg.lock-icon path, .valid:focus + svg.clock-icon path {
+    fill: #1fcc8e!important;
+}
+
+.email-wrong, .username-wrong, .pass-wrong, .c-pass-wrong {
+    width: 16px;
+    position: relative;
+    left: 306px;
+    top: -32px;
+    display: none;
+}
+
+.email-wrong.invalid, .username-wrong.invalid, .pass-wrong.invalid, .c-pass-wrong.invalid {
+    display: block;
+    border: none!important;
+}
+
+.email-wrong-icon, .username-wrong-icon, .pass-wrong-icon, .c-pass-wrong-icon {
+    fill: #da4343;
+}
+
+.email-correct, .username-correct, .pass-correct, .c-pass-correct {
+    width: 16px;
+    position: relative;
+    left: 306px;
+    top: -32px;
+    display: none;
+}
+
+.email-correct.valid, .username-correct.valid, .pass-correct.valid, .c-pass-correct.valid {
+    display: block;
+    border: none!important;
+}
+
+.email-correct-icon, .username-correct-icon, .pass-correct-icon, .c-pass-correct-icon {
+    fill: #1FCC8E;
+}
+
+/* STYLING WHEN WEAK PASSWORD IS DETECTED */
+.weak-input {
+    border: 2px solid #f08833!important;
+}
+
+.weak-input + span.error {
+    color: #f08833;
+}
+
+.weak-input + span.error + .lock-icon {
+    fill: #f08833;
+}
+
+.weak-input:focus {
+    border: 2px solid #f08833!important;
+} 
+
+.pass-wrong.weak {
+    display: block;
+}
+
+.pass-wrong .pass-wrong-icon.weak {
+    fill: #f08833;
+}
+
+/* STYLING WHEN MODERATE PASSWORD IS DETECTED */
+.moderate-input {
+    border: 2px solid #c2c51a!important;
+}
+
+.moderate-input + span.error {
+    color: #c2c51a;
+}
+
+.moderate-input + span.error + .lock-icon {
+    fill: #c2c51a;
+}
+
+.moderate-input:focus {
+    border: 2px solid #c2c51a!important;
+} 
+
+.pass-wrong.moderate {
+    display: block;
+}
+
+.pass-wrong .pass-wrong-icon.moderate {
+    fill: #c2c51a;
+}
+
+/* STYLING WHEN STRONG PASSWORD IS DETECTED */
+.strong-input {
+    border: 2px solid #1FCC8E!important;
+}
+
+.strong-input + span.error {
+    color: #1FCC8E;
+}
+
+.strong-input + span.error + .lock-icon {
+    fill: #1FCC8E;
+}
+
+.strong-input:focus {
+    border: 2px solid #1FCC8E!important;
+} 
+
+.pass-correct.strong {
+    display: block;
+}
+
+.pass-correct .pass-correct-icon.strong {
+    fill: #1FCC8E;
+}
+
+/* STYLING CONFIRM PASSWORD */
+.c-pass-correct.matched {
+    display: block;
+} 
+
+.c-pass-wrong.not-matched {
+    display: block;
+}
+
+.confirmpass-field.matched + span.error {
+    color: #1FCC8E;
+}
+
+
+.confirmpass-field.matched + span.error + .clock-icon {
+    fill: #1FCC8E;
+}
+/* STYLING INPUT FIELD ON SUCCESS AND FAILURE */
+
+
+/* ******************************************************************************************************************* */
+/*                                                                                                                     */
+/*                                                       MEDIA QUERY                                                   */
+/*                                                                                                                     */
+/* ******************************************************************************************************************* */
+
+/* @media only screen and (max-width:1024px) */
+
+@media only screen and (max-width: 768px) {
+    .form-container {
+        width: 320px;
+        height: auto;
+    }
+
+    form { 
+        transform: scale(0.9);
+        margin: 0 0!important;
+    }
+    
+    .form-header h1 {
+        color: #1fcc8e;
+        font-weight: 600;
+    }
+
+    #textSpan {
+        top: 145px;
+    }
+    
+    #passSpan {
+        top: 218px;
+    }
+
+    footer a, footer span {
+        font-size: 0.9em;
+    }
+
+    .footer-copyright {
+        text-align: center;
+    }
+
+    .bottom-link {
+        text-align: center!important;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    html, body {
+        background-image: none;
+        background-color: #212121;
+        border-top: none;
+    }
+
+    .section-1 {
+        background: none;
+    }
+
+    .form-container {
+        /* padding: 110px 20px; */
+        padding-left: 20px;
+        padding-right: 20px;
+        box-shadow: none;
+        min-height: 100vh;
+        width: 100%;
+    }
+
+    .main-form {
+        transform: scale(1);
+        margin: 20px 0!important;
+    }
+
+    .form-header h1 {
+        font-size: 3em;
+    }
+
+    #textSpan {
+        top: 155px;
+    }
+    
+    #passSpan {
+        top: 228px;
+    }
+
+    .checkbox-circle {
+        left: 70px;
+        margin-top: 15px;
+    }
+}
+
