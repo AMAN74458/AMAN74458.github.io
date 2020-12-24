@@ -734,6 +734,19 @@ footer a:hover {
         font-size: 1em;
     }
 
+    /* OVERIDING BROWSER AUTOFILL STYLES */
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    input:-webkit-autofill:active  {
+        box-shadow: 0 0 0 30px #212121 inset !important;
+        -webkit-box-shadow: 0 0 0 30px #212121 inset !important;
+        -webkit-text-fill-color: #ffffff !important;
+        animation: none!important;
+        transition: none!important;
+    }
+/* ENDING BROWSER AUTOFILL STYLES */
+
     .grp-1 .email-field, .grp-2 .text-field, .grp-3 .pass-field, .grp-4 .confirmpass-field {
         border: 1px solid #ffffff;
         background-color: #212121;
@@ -799,6 +812,10 @@ footer a:hover {
         box-shadow: none!important;
         border: 2px solid #1fcc8e!important;
         outline: none;
+    }
+
+    .valid + .email-icon, .valid + .user-icon, .valid + .lock-icon .valid + .clock-icon {
+        fill: #1fcc8e!important;
     }
     
     .valid:focus + svg.email-icon path, .valid:focus + svg.user-icon path, .valid:focus + svg.lock-icon path, .valid:focus + svg.clock-icon path {
