@@ -49,10 +49,12 @@ html, body {
 
 
 .section-1 {
-    min-height: 80vh;
+    min-height: 90vh;
     margin-top: 110px;
     padding: 18px 0 5px 0;
-    padding-right: calc((50% - 450px) / 2);
+    padding-top: calc(((90vh - 694px) / 2));
+    padding-bottom: calc(((90vh - 694px) / 2));
+    padding-left: calc((50% - 450px) / 2);
     padding-right: calc((50% - 450px) / 2);
 }
 
@@ -60,14 +62,17 @@ html, body {
 .form-container {
     float: right;
     width: 450px;
-    height: 559px;
-    padding: 49px 58px;
+    padding: 50px 58px;
     margin: 20px 0 20px 0;
     border-radius: 5px;
     border: 1px solid #f0f0f0;
     background-color: #ffffff;
     box-shadow: 0 0 8px 5px #f8f8f8;
     transition: all 0.5s ease;
+}
+
+.main-form {
+    height: 554px;
 }
 
 /* STYLING head part of form */
@@ -113,25 +118,25 @@ input:-webkit-autofill:active  {
 
 .email-icon {
     position: absolute;
-    top: 306px;
+    top: 311.45px;
     margin-left: 12px;
 }
 
 .user-icon {
     position: absolute;
-    top: 368px;
+    top: 373.45px;
     margin-left: 12px;
 }
 
 .lock-icon {
     position: absolute;
-    top: 430px;
+    top: 435.45px;
     margin-left: 12px;
 }
 
 .clock-icon {
     position: absolute;
-    top: 492px;
+    top: 497.45px;
     margin-left: 12px;
 }
 
@@ -175,8 +180,63 @@ input:-webkit-autofill:active  {
     transition: transform 0.5s ease;
 }
 
+.ex-signup-btns {
+    height: 44px;
+}
+
+.g-signin2 {
+    float: left; 
+    margin-left: 30px;  
+    border-radius: .25rem!important;
+}
+
+.abcRioButtonLightBlue {
+    border-radius: .25rem!important;
+}
+
+.abcRioButtonIcon {
+    padding: 9px!important;
+    margin-left: 14px;
+}
+
+.g-signin2 span {
+    font-family: 'Quicksand', sans-serif!important;
+    font-size: 13px!important;
+    font-weight: 500;
+    letter-spacing: normal;
+    margin-left: 0;
+    margin-right: 10px;
+    vertical-align: auto;  
+}
+
+.github-signin {
+    cursor: pointer;
+    float: right;
+    width: 120px;
+    height: 36px;
+    padding: 1px 0 0 0;
+    margin-right: 30px;
+    border-radius: .25rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.25);
+}
+
+.github-signin span {
+    margin-right: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #757575;
+}
+
+.github-icon {
+    width: 34px;
+    padding: 8px;
+    /* margin-left: 10px; */
+}
+
 /* STYLING form bottom part containg privacy statement */
 .p-bot {
+    clear: both;
     font-size: 0.9em;
     font-weight: 400;
 }
@@ -357,23 +417,23 @@ footer a:hover {
 
 /* FOR SIGNUP PAGE ERROR PAGE */
 #sTextSpan {
-    top: 281px;
+    top: 285.45px;
     /* top: 141px; */
 }
 
 #usernameSpan {
     /* top: 203px; */
-    top: 343px;
+    top: 347.45px;
 }
 
 #sPassSpan {
     /* top: 265px; */
-    top: 405px;
+    top: 409.45px;
 }
 
 #confirmPassSpan {
     /* top: 327px; */
-    top: 467px;
+    top: 471.45px;
 }
 /* FOR SIGNUP PAGE ERROR PAGE */
 
@@ -576,9 +636,225 @@ footer a:hover {
 /*                                                                                                                     */
 /* ******************************************************************************************************************* */
 
-/* @media only screen and (max-width:1024px) */
+@media only screen and (max-width:1024px) {
+    .form-container {
+        transform: scale(0.9);
+        backface-visibility: hidden;
+    }
 
-@media only screen and (max-width: 768px) {
+    .email-icon {
+        top: 157px;
+    }
+
+    .user-icon {
+        top: 219px;
+    }
+    
+    .lock-icon {
+        top: 281px;
+    }
+    
+    .clock-icon {
+        top: 343px;
+    }
+
+    #sTextSpan {
+        top: 131px;
+    }
+    
+    #usernameSpan {
+        top: 193px;
+    }
+    
+    #sPassSpan {
+        top: 255px;
+    }
+    
+    #confirmPassSpan {
+        top: 317px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    html, body {
+        background-color: #212121!important;
+    }
+
+    .navbar-custom {
+        padding: 15px 5% 15px 5%;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
+    }
+
+    .li-top-menu {
+        border: 1px solid #ffffff;
+    }
+    
+    .li-top-menu:hover {
+        background-color: #ffffff;
+        border: 1px solid #ffffff;
+    }
+    
+    .li-top-menu #login {
+        color: #ffffff;
+    }
+    
+    .li-top-menu #login:hover {
+        color: #000000;
+    }
+
+    .section-1 {
+        margin-top: 86.17px;
+        padding-top: calc(((90vh - 694px) / 2));
+        padding-bottom: calc(((90vh - 694px) / 2));
+        padding-right: calc((100% - 450px) / 2);
+        padding-left: calc((100% - 450px) / 2);
+    }
+
+    .form-container {
+        float: none;
+        border: none;
+        height: 656px;
+        padding: 45.5px 58px;
+        background-color: #212121;
+        box-shadow: none;
+        transform: scale(1);
+    }
+
+    .main-form {
+        height: auto;
+    }
+
+    .form-header h1 {
+        font-size: 2.4em;
+        color: #1fcc8e;
+    }
+    
+    .form-header p {
+        color: #ffffff;
+        font-size: 1em;
+    }
+
+    .grp-1 .email-field, .grp-2 .text-field, .grp-3 .pass-field, .grp-4 .confirmpass-field {
+        border: 1px solid #ffffff;
+        background-color: #212121;
+    }
+
+    .text-field::placeholder, .email-field::placeholder, .pass-field::placeholder, .confirmpass-field::placeholder {
+        color: #d4d4d4;
+    }
+
+    .grp-1 .email-icon, .grp-2 .user-icon, .grp-3 .lock-icon, .grp-4 .clock-icon {
+        fill: #ffffff;
+    }
+
+    .form-control:focus {
+        color: #d4d4d4;
+        background-color: #212121;
+        border: 2px solid #d4d4d4!important;
+    }
+
+    .email-field:focus + svg.email-icon path, .text-field:focus + svg.user-icon path, .email-field:focus + svg.user-icon path, .pass-field:focus + svg.lock-icon path, .confirmpass-field:focus + svg.clock-icon path {
+        fill: #d4d4d4;
+    }
+
+    .signup-btn {
+        color: #000000;
+        font-weight: 500;
+        border: 2px solid #1fcc8e;
+        background-color: #1fcc8e;
+        box-shadow: none;
+    }
+    
+    .signup-btn:hover {
+        color: #000000;
+    }
+
+    .p-bot {
+        color: #d6d6d6;
+    }
+
+    .email-icon {
+        top: 165px;
+    }
+    
+    .user-icon {
+        top: 227px;
+    }
+    
+    .lock-icon {
+        top: 289px;
+    }
+    
+    .clock-icon {
+        top: 351px;
+    }
+
+    #sTextSpan {
+        top: 139px;
+    }
+    
+    #usernameSpan {
+        top: 201px;
+    }
+    
+    #sPassSpan {
+        top: 263px;
+    }
+    
+    #confirmPassSpan {
+        top: 325px;
+    }
+
+    .copyright-sect {
+        color: #969595;
+    }
+
+    footer a {
+        color: #ffffff;
+    }
+}
+
+@media only screen and (max-width: 451px) {
+    .form-container {
+        width: auto;
+        padding: 45.5px 58px;
+    }
+
+    .email-icon {
+        top: 189px;
+    }
+    
+    .user-icon {
+        top: 251px;
+    }
+    
+    .lock-icon {
+        top: 313px;
+    }
+    
+    .clock-icon {
+        top: 375px;
+    }
+
+    #sTextSpan {
+        top: 163px;
+    }
+    
+    #usernameSpan {
+        top: 225px;
+    }
+    
+    #sPassSpan {
+        top: 287px;
+    }
+    
+    #confirmPassSpan {
+        top: 349px;
+    }
+}
+
+/* @media only screen and (max-width: 768px) {
     .form-container {
         width: 320px;
         height: auto;
@@ -627,7 +903,6 @@ footer a:hover {
     }
 
     .form-container {
-        /* padding: 110px 20px; */
         padding-left: 20px;
         padding-right: 20px;
         box-shadow: none;
@@ -657,4 +932,4 @@ footer a:hover {
         margin-top: 15px;
     }
 }
-
+ */

@@ -8,6 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="" type="" href="">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Bob The Coder</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../img/BTC 32.png">
@@ -47,10 +48,10 @@
                 <div class="form-header">
                     <h1 class="text-left">Sign Up</h1>
                     <!-- <hr class="text-center"> -->
-                    <p class="text-left mt-md-3 mt-lg-3">Hey! Signup and become a member of BTC.</p>
+                    <p class="text-left mt-3 mt-sm-3 mt-md-3 mt-lg-3">Hey! Signup and become a member of BTC.</p>
                 </div>
                 <!-- INPUT FIELD 0 -->
-                <div class="form-group grp-1 mt-md-3 pt-md-2 mt-lg-3 pt-lg-2">
+                <div class="form-group grp-1 mt-3 pt-2 mt-sm-3 pt-sm-2 mt-md-3 pt-md-2 mt-lg-3 pt-lg-2">
                     <input type="email" name="email" class="form-control email-field" id="InputEmail" aria-describedby="email" placeholder="Email" required aria-required="true" aria-label=Email>
                     <svg class="email-icon form-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
                         <g>
@@ -75,7 +76,7 @@
                     </div>
                 </div>
                 <!-- INPUT FIELD 1 -->
-                <div class="form-group grp-2 mt-md-3 pt-md-2 mt-lg-3 pt-lg-2" id="inputField2">
+                <div class="form-group grp-2 grp-1 mt-3 pt-2 mt-sm-3 pt-sm-2 mt-md-3 pt-md-2 mt-lg-3 pt-lg-2" id="inputField2">
                     <input type="text" name="username" class="form-control text-field" id="InputName" aria-describedby="text" placeholder="Username" required aria-required="true" aria-label="Username">
                     <svg class="user-icon form-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;" xml:space="preserve">
                         <g>
@@ -100,7 +101,7 @@
                     </div>
                 </div>
                 <!-- INPUT FIELD 2 -->
-                <div class="form-group grp-3 mt-md-3 pt-md-2 mt-lg-3 pt-lg-2">
+                <div class="form-group grp-3 grp-1 mt-3 pt-2 mt-sm-3 pt-sm-2 mt-md-3 pt-md-2 mt-lg-3 pt-lg-2">
                     <input type="password" name="password" class="form-control pass-field" id="InputPassword" placeholder="Password" required aria-required="true" aria-label="Password">
                     <svg class="lock-icon form-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 372.826 372.826" style="enable-background:new 0 0 372.826 372.826;" xml:space="preserve">
                         <g>
@@ -126,7 +127,7 @@
                     </div>
                 </div>
                 <!-- INPUT FIELD 3 -->
-                <div class="form-group grp-4 mt-md-3 pt-md-2 mt-lg-3 pt-lg-2">
+                <div class="form-group grp-4 grp-1 mt-3 pt-2 mt-sm-3 pt-sm-2 mt-md-3 pt-md-2 mt-lg-3 pt-lg-2">
                     <input type="password" name="confirm-password" class="form-control confirmpass-field" id="InputConfirmPassword" placeholder="Confirm Password" required aria-required="true" aria-label="Confirm Password">
                     <svg class="clock-icon form-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 372.826 372.826" style="enable-background:new 0 0 372.826 372.826;" xml:space="preserve">
                         <g>
@@ -151,10 +152,18 @@
                         </svg>
                     </div>
                 </div>
-                <div class="text-left signup-btn-sect mt-md-4 pt-md-2 mt-lg-4 pt-lg-2">
+                <div class="text-left signup-btn-sect mt-4 pb-2 pt-2 mt-sm-4 pb-sm-2 pt-sm-2 mt-md-4 pb-md-2 pt-md-2 mt-lg-4 pb-lg-2 pt-lg-2">
                     <button type="submit" class="btn signup-btn" id="signupButton">Sign Up</button>
                 </div>
-                <p class="text-left p-bot mt-md-3 pt-md-2 mt-lg-3 pt-lg-2">By creating account, you agree to BTC <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
+                <hr class="buttons-sepearate">
+                <div class="ex-signup-btns pt-2 pt-sm-2 pt-md-2 pt-lg-2">
+                    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                    <div class="github-signin text-center">
+                        <img src="../img/GitHub-Mark-32px.png" alt="" class="github-icon">
+                        <span class="github-content">Sign in</span>
+                    </div>
+                </div>
+                <p class="text-left p-bot mt-4 pt-2 mt-sm-4 pt-sm-2 mt-md-4 pt-md-2 mt-lg-4 pt-lg-2">By creating account, you agree to BTC <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
             </form>
         </div>
 
@@ -174,11 +183,11 @@
         <div class="container-fluid text-md-left footer-container">
             <div class="row footer-flex">
                 <!-- Copyright -->
-                <div class="col-sm-12 col-md-4 col-lg-4 footer-copyright text-lg-left pb-3">
+                <div class="col-sm-12 col-md-4 col-lg-4 footer-copyright text-center text-sm-center text-md-left text-lg-left pb-3">
                     <span class="copyright-sect">&copy; 2020 Copyright BobTheCoder</span>
                 </div>
                 <!-- Copyright -->
-                <div class="bottom-link col-sm-12 col-md-8 col-lg-8 text-right">
+                <div class="bottom-link col-sm-12 col-md-8 col-lg-8 text-center text-sm-center text-md-right text-lg-right">
                     <ul class="list-unstyled mt-md-2 pt-md-1 mt-lg-0 pt-lg-0">
                         <li><a href="#!" class="bottom-foot-link pl-sm-3">Career</a></li>
                         <li><a href="contact" class="bottom-foot-link pl-2 pl-sm-3">Contact</a></li>
@@ -197,7 +206,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="../js/min/ValidationForm.min.js"></script>
+    <script src="../js/ValidationForm.js"></script>
 </body>
 </html>
