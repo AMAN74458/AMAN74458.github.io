@@ -5,7 +5,8 @@ html, body {
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
     background: linear-gradient(90deg, #212121 50%, #ffffff00 50%);
-    min-height: 90vh;
+    /* min-height: 90vh; */
+    height: 100%;
 }
 
 /* NAVBAR STYLING */
@@ -117,26 +118,31 @@ input:-webkit-autofill:active  {
 }
 
 .email-icon {
-    position: absolute;
-    top: 311.45px;
+    position: relative;
+    /* top: 311.45px; */
+    /* top: 297.45px; */
+    top: -33px;
     margin-left: 12px;
 }
 
 .user-icon {
-    position: absolute;
-    top: 373.45px;
+    position: relative;
+    /* top: 373.45px; */
+    top: -33px;
     margin-left: 12px;
 }
 
 .lock-icon {
-    position: absolute;
-    top: 435.45px;
+    position: relative;
+    /* top: 435.45px; */
+    top: -33px;
     margin-left: 12px;
 }
 
 .clock-icon {
-    position: absolute;
-    top: 497.45px;
+    position: relative;
+    /* top: 497.45px; */
+    top: -33px;
     margin-left: 12px;
 }
 
@@ -405,6 +411,9 @@ footer a:hover {
     margin-left: 10px;
 }
 
+.error-content {
+    position: relative;
+}
 /* for LOGIN PAGE ERROR */
 #textSpan {
     top: 332px;
@@ -417,23 +426,27 @@ footer a:hover {
 
 /* FOR SIGNUP PAGE ERROR PAGE */
 #sTextSpan {
-    top: 285.45px;
+    top: -17px;
+    /* top: 285.45px; */
     /* top: 141px; */
 }
 
 #usernameSpan {
     /* top: 203px; */
-    top: 347.45px;
+    /* top: 347.45px; */
+    top: -17px;
 }
 
 #sPassSpan {
     /* top: 265px; */
-    top: 409.45px;
+    /* top: 409.45px; */
+    top: -17px;
 }
 
 #confirmPassSpan {
     /* top: 327px; */
-    top: 471.45px;
+    /* top: 471.45px; */
+    top: -17px;
 }
 /* FOR SIGNUP PAGE ERROR PAGE */
 
@@ -473,7 +486,7 @@ footer a:hover {
     color: #da4343;
 }
 
-.invalid + span.error + .email-icon, .invalid + span.error + .user-icon, .invalid + span.error + .lock-icon, .invalid + span.error + .clock-icon {
+.invalid + .email-icon, .invalid + .user-icon, .invalid + .lock-icon, .invalid + .clock-icon {
     fill: #da4343;
 }
 
@@ -481,6 +494,10 @@ footer a:hover {
     box-shadow: none!important;
     border: 2px solid #da4343!important;
     outline: none;
+}
+
+.invalid:focus + svg.email-icon path, .invalid:focus + svg.user-icon path, .invalid:focus + svg.lock-icon path, .invalid:focus + svg.clock-icon path {
+    fill: #da4343!important;
 }
 
 .valid {
@@ -505,7 +522,7 @@ footer a:hover {
     width: 16px;
     position: relative;
     left: 306px;
-    top: -32px;
+    top: -56px;
     display: none;
 }
 
@@ -522,7 +539,7 @@ footer a:hover {
     width: 16px;
     position: relative;
     left: 306px;
-    top: -32px;
+    top: -56px;
     display: none;
 }
 
@@ -536,19 +553,24 @@ footer a:hover {
 }
 
 /* STYLING WHEN WEAK PASSWORD IS DETECTED */
-.weak-input {
+.weak-input-field {
     border: 2px solid #f08833!important;
 }
 
-.weak-input + span.error {
+#error-3.weak-input span.error {
     color: #f08833;
+    border: none!important;
 }
 
-.weak-input + span.error + .lock-icon {
+.weak-input-field + .lock-icon {
     fill: #f08833;
 }
 
-.weak-input:focus {
+.weak-input-field:focus + svg.lock-icon path {
+    fill: #f08833;
+}
+
+.weak-input-field:focus {
     border: 2px solid #f08833!important;
 } 
 
@@ -561,19 +583,23 @@ footer a:hover {
 }
 
 /* STYLING WHEN MODERATE PASSWORD IS DETECTED */
-.moderate-input {
+.moderate-input-field {
     border: 2px solid #c2c51a!important;
 }
 
-.moderate-input + span.error {
+#error-3.moderate-input span.error {
     color: #c2c51a;
 }
 
-.moderate-input + span.error + .lock-icon {
+.moderate-input-field + .lock-icon {
     fill: #c2c51a;
 }
 
-.moderate-input:focus {
+.moderate-input-field:focus + svg.lock-icon path {
+    fill: #c2c51a;
+}
+
+.moderate-input-field:focus {
     border: 2px solid #c2c51a!important;
 } 
 
@@ -586,19 +612,23 @@ footer a:hover {
 }
 
 /* STYLING WHEN STRONG PASSWORD IS DETECTED */
-.strong-input {
+.strong-input-field {
     border: 2px solid #1FCC8E!important;
 }
 
-.strong-input + span.error {
+#error-3.strong-input span.error {
     color: #1FCC8E;
 }
 
-.strong-input + span.error + .lock-icon {
+.strong-input-field + .lock-icon {
     fill: #1FCC8E;
 }
 
-.strong-input:focus {
+.strong-input-field:focus + svg.lock-icon path {
+    fill: #1FCC8E;
+}
+
+.strong-input-field:focus {
     border: 2px solid #1FCC8E!important;
 } 
 
@@ -619,7 +649,7 @@ footer a:hover {
     display: block;
 }
 
-.confirmpass-field.matched + span.error {
+#error-4.matched span.error {
     color: #1FCC8E;
 }
 
@@ -640,38 +670,6 @@ footer a:hover {
     .form-container {
         transform: scale(0.9);
         backface-visibility: hidden;
-    }
-
-    .email-icon {
-        top: 157px;
-    }
-
-    .user-icon {
-        top: 219px;
-    }
-    
-    .lock-icon {
-        top: 281px;
-    }
-    
-    .clock-icon {
-        top: 343px;
-    }
-
-    #sTextSpan {
-        top: 131px;
-    }
-    
-    #usernameSpan {
-        top: 193px;
-    }
-    
-    #sPassSpan {
-        top: 255px;
-    }
-    
-    #confirmPassSpan {
-        top: 317px;
     }
 }
 
@@ -775,38 +773,6 @@ footer a:hover {
         color: #d6d6d6;
     }
 
-    .email-icon {
-        top: 165px;
-    }
-    
-    .user-icon {
-        top: 227px;
-    }
-    
-    .lock-icon {
-        top: 289px;
-    }
-    
-    .clock-icon {
-        top: 351px;
-    }
-
-    #sTextSpan {
-        top: 139px;
-    }
-    
-    #usernameSpan {
-        top: 201px;
-    }
-    
-    #sPassSpan {
-        top: 263px;
-    }
-    
-    #confirmPassSpan {
-        top: 325px;
-    }
-
     .section-1 hr {
         border-top: 1px solid #b4b4b4!important;
     }
@@ -818,44 +784,32 @@ footer a:hover {
     footer a {
         color: #ffffff;
     }
+
+    .invalid:focus {
+        box-shadow: none!important;
+        border: 2px solid #da4343!important;
+        outline: none;
+    }
+
+    .invalid + .email-icon, .invalid + .user-icon, .invalid + .lock-icon, .invalid + .clock-icon {
+        fill: #da4343;
+    }
+
+    .valid:focus {
+        box-shadow: none!important;
+        border: 2px solid #1fcc8e!important;
+        outline: none;
+    }
+    
+    .valid:focus + svg.email-icon path, .valid:focus + svg.user-icon path, .valid:focus + svg.lock-icon path, .valid:focus + svg.clock-icon path {
+        fill: #1fcc8e!important;
+    }
 }
 
 @media only screen and (max-width: 451px) {
     .form-container {
         width: auto;
         padding: 45.5px 58px;
-    }
-
-    .email-icon {
-        top: 189px;
-    }
-    
-    .user-icon {
-        top: 251px;
-    }
-    
-    .lock-icon {
-        top: 313px;
-    }
-    
-    .clock-icon {
-        top: 375px;
-    }
-
-    #sTextSpan {
-        top: 163px;
-    }
-    
-    #usernameSpan {
-        top: 225px;
-    }
-    
-    #sPassSpan {
-        top: 287px;
-    }
-    
-    #confirmPassSpan {
-        top: 349px;
     }
 
     .g-signin2 {
@@ -866,83 +820,3 @@ footer a:hover {
         margin-right: 0;
     }
 }
-
-/* @media only screen and (max-width: 768px) {
-    .form-container {
-        width: 320px;
-        height: auto;
-    }
-
-    form { 
-        transform: scale(0.9);
-        margin: 0 0!important;
-    }
-    
-    .form-header h1 {
-        color: #1fcc8e;
-        font-weight: 600;
-    }
-
-    #textSpan {
-        top: 145px;
-    }
-    
-    #passSpan {
-        top: 218px;
-    }
-
-    footer a, footer span {
-        font-size: 0.9em;
-    }
-
-    .footer-copyright {
-        text-align: center;
-    }
-
-    .bottom-link {
-        text-align: center!important;
-    }
-}
-
-@media only screen and (max-width: 425px) {
-    html, body {
-        background-image: none;
-        background-color: #212121;
-        border-top: none;
-    }
-
-    .section-1 {
-        background: none;
-    }
-
-    .form-container {
-        padding-left: 20px;
-        padding-right: 20px;
-        box-shadow: none;
-        min-height: 100vh;
-        width: 100%;
-    }
-
-    .main-form {
-        transform: scale(1);
-        margin: 20px 0!important;
-    }
-
-    .form-header h1 {
-        font-size: 3em;
-    }
-
-    #textSpan {
-        top: 155px;
-    }
-    
-    #passSpan {
-        top: 228px;
-    }
-
-    .checkbox-circle {
-        left: 70px;
-        margin-top: 15px;
-    }
-}
- */
