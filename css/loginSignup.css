@@ -821,6 +821,112 @@ footer a:hover {
     .valid:focus + svg.email-icon path, .valid:focus + svg.user-icon path, .valid:focus + svg.lock-icon path, .valid:focus + svg.clock-icon path {
         fill: #1fcc8e!important;
     }
+
+    /* STYLING WHEN WEAK PASSWORD IS DETECTED */
+    .weak-input-field {
+        border: 2px solid #f08833!important;
+    }
+
+    #error-3.weak-input span.error {
+        color: #f08833;
+        border: none!important;
+    }
+
+    .weak-input-field + .lock-icon {
+        fill: #f08833;
+    }
+
+    .weak-input-field:focus + svg.lock-icon path {
+        fill: #f08833;
+    }
+
+    .weak-input-field:focus {
+        border: 2px solid #f08833!important;
+    } 
+
+    .pass-wrong.weak {
+        display: block;
+    }
+
+    .pass-wrong .pass-wrong-icon.weak {
+        fill: #f08833;
+    }
+
+    /* STYLING WHEN MODERATE PASSWORD IS DETECTED */
+    .moderate-input-field {
+        border: 2px solid #c2c51a!important;
+    }
+
+    #error-3.moderate-input span.error {
+        color: #c2c51a;
+    }
+
+    .moderate-input-field + .lock-icon {
+        fill: #c2c51a;
+    }
+
+    .moderate-input-field:focus + svg.lock-icon path {
+        fill: #c2c51a;
+    }
+
+    .moderate-input-field:focus {
+        border: 2px solid #c2c51a!important;
+    } 
+
+    .pass-wrong.moderate {
+        display: block;
+    }
+
+    .pass-wrong .pass-wrong-icon.moderate {
+        fill: #c2c51a;
+    }
+
+    /* STYLING WHEN STRONG PASSWORD IS DETECTED */
+    .strong-input-field {
+        border: 2px solid #1FCC8E!important;
+    }
+
+    #error-3.strong-input span.error {
+        color: #1FCC8E;
+    }
+
+    .strong-input-field + .lock-icon {
+        fill: #1FCC8E;
+    }
+
+    .strong-input-field:focus + svg.lock-icon path {
+        fill: #1FCC8E;
+    }
+
+    .strong-input-field:focus {
+        border: 2px solid #1FCC8E!important;
+    } 
+
+    .pass-correct.strong {
+        display: block;
+    }
+
+    .pass-correct .pass-correct-icon.strong {
+        fill: #1FCC8E;
+    }
+
+    /* STYLING CONFIRM PASSWORD */
+    .c-pass-correct.matched {
+        display: block;
+    } 
+
+    .c-pass-wrong.not-matched {
+        display: block;
+    }
+
+    #error-4.matched span.error {
+        color: #1FCC8E;
+    }
+
+
+    .confirmpass-field.matched + span.error + .clock-icon {
+        fill: #1FCC8E;
+    }
 }
 
 @media only screen and (max-width: 451px) {
