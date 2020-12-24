@@ -807,6 +807,10 @@ footer a:hover {
         top: 325px;
     }
 
+    .section-1 hr {
+        border-top: 1px solid #b4b4b4!important;
+    }
+
     .copyright-sect {
         color: #969595;
     }
@@ -855,11 +859,11 @@ footer a:hover {
     }
 
     .g-signin2 {
-        margin-left: 10px;  
+        margin-left: 0;  
     }
 
     .github-signin {
-        margin-right: 10px;
+        margin-right: 0;
     }
 }
 
