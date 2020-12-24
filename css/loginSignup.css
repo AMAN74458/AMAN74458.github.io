@@ -654,7 +654,7 @@ footer a:hover {
 }
 
 
-.confirmpass-field.matched + span.error + .clock-icon {
+.confirmpass-field.matched + .clock-icon {
     fill: #1FCC8E;
 }
 /* STYLING INPUT FIELD ON SUCCESS AND FAILURE */
@@ -750,6 +750,7 @@ footer a:hover {
     .grp-1 .email-field, .grp-2 .text-field, .grp-3 .pass-field, .grp-4 .confirmpass-field {
         border: 1px solid #ffffff;
         background-color: #212121;
+        color: #e6e6e6;
     }
 
     .text-field::placeholder, .email-field::placeholder, .pass-field::placeholder, .confirmpass-field::placeholder {
@@ -924,7 +925,7 @@ footer a:hover {
     }
 
 
-    .confirmpass-field.matched + span.error + .clock-icon {
+    .confirmpass-field.matched + .clock-icon {
         fill: #1FCC8E;
     }
 }
@@ -941,5 +942,13 @@ footer a:hover {
 
     .github-signin {
         margin-right: 0;
+    }
+
+    .email-wrong, .username-wrong, .pass-wrong, .c-pass-wrong {
+        left: 90%;
+    }
+
+    .email-correct, .username-correct, .pass-correct, .c-pass-correct {
+        left: 90%;
     }
 }
