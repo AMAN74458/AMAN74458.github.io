@@ -408,9 +408,9 @@ html, body {
 }
 
 /* LOGIN-JOIN BUTTON STYLIING */
-.login-join-btn button {
+.login-join-btn a {
     margin-top: 36px;
-    border-radius: 50px;
+    border-radius: 50px!important;
     font-weight: 600;
     letter-spacing: 1px;
     box-shadow: none!important;
