@@ -190,6 +190,32 @@ input:-webkit-autofill:active  {
     height: 44px;
 }
 
+.login-btn {
+    color: #ffffff;
+    width: 120px;
+    border: 2px solid #181818;
+    background-color: #181818;
+    box-shadow: 0 0 6px 2px #ebebeb;
+    transition: all 0.5s ease;
+}
+
+.login-btn:hover {
+    color: #ffffff;
+}
+
+.login-btn:focus {
+    box-shadow: none;
+}
+
+.login-btn:active {
+    transform: scale(0.9);
+    transition: transform 0.5s ease;
+}
+
+.ex-login-btns {
+    height: 44px;
+}
+
 .g-signin2 {
     float: left; 
     margin-left: 30px;  
@@ -416,11 +442,11 @@ footer a:hover {
 }
 /* for LOGIN PAGE ERROR */
 #textSpan {
-    top: 332px;
+    top: -17px;
 }
 
 #passSpan {
-    top: 405px;
+    top: -17px;
 }
 /* for LOGIN PAGE ERROR */
 
