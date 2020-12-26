@@ -1,12 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>You are offline</title>
+      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <title>You are offline</title>
-  </head>
-  <body>
-    <h1>You are offline</h1>
+      <style>
+          html, body {
+              background-color: #212121;
+          }
+
+          main {
+            padding: 1%;
+          }
+
+          .top-part {
+              width: 120px;
+              margin-top: 20px;
+              margin-left: 150px;
+          }
+
+          .mid {
+              margin-top: 30px;
+              width: 100%;
+          }
+
+          .mid-head h1 {
+            color: #f3f3f3;
+            font-size: 9em;
+            font-weight: 400;
+            text-align: center;
+            font-family: Quicksand;
+            /* letter-spacing: 1px; */
+          }
+
+          .mid-head h1 span {
+              font-weight: 700;
+              color: #1FCC8E;
+          }
+
+          hr.mid-bottom-sepration {
+            width: 90%;
+            border-radius: 5px;
+            border: 2px dashed #ffffff;
+          }
+
+          .bottom {
+            padding: 20px 5%;
+          }
+
+          .bottom span {
+            width: 100%;
+              color: #d4d4d4;
+              font-family: Quicksand;
+          }
+
+      </style>
+    </head>
+<body>
+    <main>
+      <!-- top -->
+      <div class="brand-logo top-part">
+          <svg id="compny-logo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 467.4 269.79"><defs><style>.cls-1{fill:#333646;}.cls-2{fill:#1FCC8E;}.cls-3{fill:#535e5d;}</style></defs><!--<rect class="cls-1" width="467.4" height="269.79" rx="12"/>--><path class="cls-2" d="M361.25,270.06l-28.43,14.06a5.74,5.74,0,0,0,0,10.3l28.38,14a5.64,5.64,0,0,1,3.14,5.05v65.42a18.25,18.25,0,0,1-18.26,18.26H225.61a5.74,5.74,0,0,1-5.74-5.74V187a5.74,5.74,0,0,1,5.74-5.74H345.8a18.56,18.56,0,0,1,18.55,18.55v65.22A5.56,5.56,0,0,1,361.25,270.06Z" transform="translate(-192.63 -154.4)"/><rect class="cls-3" x="207.05" y="26.9" width="198.13" height="34.66" rx="5.77"/><rect class="cls-3" x="408.39" y="288.26" width="180.72" height="36.23" rx="5.62" transform="translate(-0.26 650.72) rotate(-90)"/><rect class="cls-2" x="480.63" y="216.02" width="151.83" height="36.94" rx="5.42" transform="translate(920.46 314.57) rotate(180)"/><rect class="cls-2" x="480.63" y="362.02" width="151.83" height="34.72" rx="5.7" transform="translate(920.46 604.36) rotate(180)"/><circle class="cls-3" cx="306.12" cy="80.09" r="7.66"/><circle class="cls-3" cx="306.12" cy="224.98" r="7.66"/></svg>
+      </div>
+      <!-- mid -->
+      <div class="mid">
+          <div class="mid-head">
+              <h1>You are <span>offline!</span></h1>
+          </div>
+          <div class="offline-img">
+              <img src="" alt="" class="offline">
+          </div>
+          <div class="offline-content">
+              <p class="offline-info"></p>
+          </div>
+      </div>
+      <!-- bottom -->
+      <hr class="mid-bottom-sepration">
+      <div class="bottom">
+          <div class="copyright-sect">
+              <span class="copyright-sect" id="cpyrgt-sect">&copy; 2020 Copyright BobTheCoder</span>
+          </div>
+      </div>
+    </main>
   </body>
 </html>
