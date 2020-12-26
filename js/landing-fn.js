@@ -62,31 +62,6 @@ var canvas = document.getElementById('canvas-sl1');
   context.fillStyle = '#1FCC8E';
   context.fill();
 
-// for popup on index page
-const signupModal = document.getElementById('signupPopupContainer')
-const loginModal = document.getElementById('loginPopupContainer')
-
-document.getElementById('joinNow').addEventListener("click", function() {
-  signupModal.style.display = 'block';
-  document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-})
-
-document.getElementById('Login').addEventListener("click", function() {
-  loginModal.style.display = 'block';
-  document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-})
-
-window.onclick = function(event) {
-  if (event.target === signupModal) {
-    signupModal.style.display = "none";
-    document.getElementsByTagName('body')[0].removeAttribute('style');
-  }
-  else if(event.target === loginModal) {
-    loginModal.style.display = "none";
-    document.getElementsByTagName('body')[0].removeAttribute('style');
-  }
-}
-
 
 // *********************** THEME MODE *************************
 // code for toggling style button switching dark and light mode
