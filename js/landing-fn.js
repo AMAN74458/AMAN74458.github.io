@@ -255,4 +255,6 @@ function setTiming() {
   }
 }
 // when user remove mouse from switch then setTiming function will be called
-darkSwitch.addEventListener("mouseleave", setTiming())
+darkSwitch.addEventListener("mouseleave", ()=> {
+  setTiming();
+})
